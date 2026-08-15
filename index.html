@@ -355,12 +355,12 @@
   var ia = document.getElementById('ld-input-area');
 
   var KI = {
-    'Allgemeine Beratung': 'Schon, dass Sie sich für ein allgemeines Beratungsgespr¤ch interessieren. Wir nehmen uns dafür bewusst ausführlich Zeit für Sie und Ihre Situation. Die individuelle Beratung und ärztliche Auseinandersetzung mit Ihrem Anliegen ist mit Kosten verbunden, die sich nach dem tatsächlichen Aufwand richten. Der erste Termin findet persönlich in der Praxis statt.',
-    'Medizinisches Cannabis': 'Danke für Ihr Vertrauen bei diesem Thema. Zur Cannabistherapie möchten wir Ihnen mitgeben: Die Erstvorstellung findet grundsätzlich persönlich vor Ort statt, nicht per Video. Ob eine Cannabistherapie für Sie infrage kommt, entscheidet sich erst nach einer ausführlichen, sorgbfältigen ärztlichen Prüfung — ein Rezept ist zu keinem Zeitpunkt garantiert. Bei einer laufenden Therapie ist mindestens einmal pro Quartal ein persönlicher Termin bei uns wichtig; Folgetermine dazwischen können gerne per Video stattfinden. Auch hier gilt: Die Beratung ist mit individuellen Kosten verbunden, die sich nach dem jeweiligen Aufwand richten.',
-    'Hormonelle Themen': 'Schon, dass Sie sich mit diesem Thema an uns wenden. Bei hormonellen Anliegen wie Testosteronmangel oder in der Prämenopause besprechen wir zunächst gemeinsam Ihre Symptome und veranlassen bei Bedarf eine gezielte Blutuntersuchung, die extern durchgeführt wird. Die Besprechung der Ergebnisse kann gerne auch per Video erfolgen. Auch hier gilt: Die individuelle Beratung ist mit Kosten verbunden, die vom jeweiligen Aufwand abhängen; Laborkosten fallen zusätzlich separat an.',
-    'Chronische Schmerzen': 'Wir freuen uns, dass Sie uns Ihr Anliegen anvertrauen möchten. Bei chronischen Schmerzen betrachten wir Ihre Beschwerden gerne im Gesamtzusammenhang – IhrY Vorgeschichte, Ihre Lebensumstände und bisherige Behandlungen fließen mit ein. Der erste Termin findet persönlich statt, Verlaufstermine sind danach auch per Video möglich. Die individuelle Beratung ist mit Kosten verbunden, die sich nach dem Aufwand richten.',
-    'Blutuntersuchung': 'Gerne unterstützen wir Sie dabei. Wir besprechen zunächst Ihre Symptome und stellen bei Bedarf einen Laborzettel für eine externe Blutabnahme aus. Die Besprechung der Ergebnisse erfolgt in einem Folgetermin, auch per Video möglich. Die Beratung ist mit individuellen Kosten verbunden; die Laborkosten selbst fallen separat an und werden meist direkt beim Labor beglichen.',
-    'Gutachten': 'Gerne erstellen wir für Sie eine schriftliche gutachtliche Stellungnahme. Der Umfang und damit auch die Kosten richten sich nach der individuellen Fragestellung – das besprechen wir im Vorab transparent mit Ihnen.'
+    'Allgemeine Beratung': 'Sch\u00f6n, dass Sie sich f\u00fcr ein allgemeines Beratungsgespr\u00e4ch interessieren. Wir nehmen uns daf\u00fcr bewusst ausf\u00fchrlich Zeit f\u00fcr Sie und Ihre Situation. Die individuelle Beratung und \u00e4rztliche Auseinandersetzung mit Ihrem Anliegen ist mit Kosten verbunden, die sich nach dem tats\u00e4chlichen Aufwand richten. Der erste Termin findet pers\u00f6nlich in der Praxis statt.',
+    'Medizinisches Cannabis': 'Danke f\u00fcr Ihr Vertrauen bei diesem Thema. Zur Cannabistherapie m\u00f6chten wir Ihnen mitgeben: Die Erstvorstellung findet grunds\u00e4tzlich pers\u00f6nlich vor Ort statt, nicht per Video. Ob eine Cannabistherapie f\u00fcr Sie infrage kommt, entscheidet sich erst nach einer ausf\u00fchrlichen, sorgf\u00e4ltigen \u00e4rztlichen Pr\u00fcfung \u2013 ein Rezept ist zu keinem Zeitpunkt garantiert. Bei einer laufenden Therapie ist mindestens einmal pro Quartal ein pers\u00f6nlicher Termin bei uns wichtig; Folgetermine dazwischen k\u00f6nnen gerne per Video stattfinden. Auch hier gilt: Die Beratung ist mit individuellen Kosten verbunden, die sich nach dem jeweiligen Aufwand richten.',
+    'Hormonelle Themen': 'Sch\u00f6n, dass Sie sich mit diesem Thema an uns wenden. Bei hormonellen Anliegen wie Testosteronmangel oder in der Pr\u00e4menopause besprechen wir zun\u00e4chst gemeinsam Ihre Symptome und veranlassen bei Bedarf eine gezielte Blutuntersuchung, die extern durchgef\u00fchrt wird. Die Besprechung der Ergebnisse kann gerne auch per Video erfolgen. Auch hier gilt: Die individuelle Beratung ist mit Kosten verbunden, die vom jeweiligen Aufwand abh\u00e4ngen; Laborkosten fallen zus\u00e4tzlich separat an.',
+    'Chronische Schmerzen': 'Wir freuen uns, dass Sie uns Ihr Anliegen anvertrauen m\u00f6chten. Bei chronischen Schmerzen betrachten wir Ihre Beschwerden gerne im Gesamtzusammenhang \u2013 Ihre Vorgeschichte, Ihre Lebensumst\u00e4nde und bisherige Behandlungen flie\u00dfen mit ein. Der erste Termin findet pers\u00f6nlich statt, Verlaufstermine sind danach auch per Video m\u00f6glich. Die individuelle Beratung ist mit Kosten verbunden, die sich nach dem Aufwand richten.',
+    'Blutuntersuchung': 'Gerne unterst\u00fctzen wir Sie dabei. Wir besprechen zun\u00e4chst Ihre Symptome und stellen bei Bedarf einen Laborzettel f\u00fcr eine externe Blutabnahme aus. Die Besprechung der Ergebnisse erfolgt in einem Folgetermin, auch per Video m\u00f6glich. Die Beratung ist mit individuellen Kosten verbunden; die Laborkosten selbst fallen separat an und werden meist direkt beim Labor beglichen.',
+    'Gutachten': 'Gerne erstellen wir f\u00fcr Sie eine schriftliche gutachtliche Stellungnahme. Der Umfang und damit auch die Kosten richten sich nach der individuellen Fragestellung \u2013 das besprechen wir vorab transparent mit Ihnen.'
   };
 
   window.ldToggle = function(){
@@ -372,36 +372,36 @@
 
   function step1(){
     ia.style.display = 'none';
-    bot('Herzlich willkommen bei Praxis LuxDocs! Schön, dass Sie den Weg zu uns gefunden haben. Ich begleite Sie in ein paar kurzen, entspannten Schritten durch die wichtigsten Infos, bevor Sie einen Termin buchen oder uns kontaktieren – das dauert nur ein bis zwei Minuten.');
+    bot('Herzlich willkommen bei Praxis LuxDocs! Sch\u00f6n, dass Sie den Weg zu uns gefunden haben. Ich begleite Sie in ein paar kurzen, entspannten Schritten durch die wichtigsten Infos, bevor Sie einen Termin buchen oder uns kontaktieren \u2013 das dauert nur ein bis zwei Minuten.');
     setTimeout(function(){
       btns([{l:'Los geht\'s', p:true, fn:function(){rmBtns(); step2();}}]);
     }, 600);
   }
 
   function step2(){
-    bot('Bevor sir loslegen, kurz eine wichtige Frage: Handelt es sich bei Ihrem Anliegen um einen akuten medizinischen Notfall?');
+    bot('Bevor wir loslegen, kurz eine wichtige Frage: Handelt es sich bei Ihrem Anliegen um einen akuten medizinischen Notfall?');
     btns([
       {l:'Nein', p:true, fn:function(){rmBtns(); user('Nein'); step3();}},
-      {l:'Ja – Notfall', fn:function(){
+      {l:'Ja \u2013 Notfall', fn:function(){
         rmBtns(); user('Ja');
-        bot('Bitte wenden Sie sich in diesem Fall umgehend an den Notruf (112) oder die nächste Notaufnahme. Unsere Praxis ist auf geplante Beratungstermine ausgerichtet und leider nicht für die Akutversorgung geeignet. Wir gewunschen Ihnen von Herzen alles Gute!');
+        bot('Bitte wenden Sie sich in diesem Fall umgehend an den Notruf (112) oder die n\u00e4chste Notaufnahme. Unsere Praxis ist auf geplante Beratungstermine ausgerichtet und leider nicht f\u00fcr die Akutversorgung geeignet. Wir w\u00fcnschen Ihnen von Herzen alles Gute!');
       }}
     ]);
   }
 
   function step3(){
     setTimeout(function(){
-      bot('Schön, dann erzähle ich Ihnen kurz, wer wir sind und wie wir arbeiten:');
+      bot('Sch\u00f6n, dann erz\u00e4hle ich Ihnen kurz, wer wir sind und wie wir arbeiten:');
       setTimeout(function(){
         var d = document.createElement('div'); d.className = 'ld-m b';
         [
-          'Wir rind eine Privatpraxis — die Behandlung wird nicht über die gesetzliche Krankenkasse abgerechnet, sondern privat in Rechnung gestellt (auch bei privater Krankenversicherung reichen Sie die Rechnung im Nachhinein selbst ein).',
-          'Uns ist Zeit für Sie wichtig: Wir arbeiten gesprächsorientiert, ohne Apparate, Spritzen oder klassische Diagnostik – im Mittelpunkt steht das ausführliche ärztliche Gespräch.',
-          'Wir verbinden fundierte Schulmedizik mit einer ganzheitlichen Perspektive – ehrlich und ohne Heilversprechen.'
+          'Wir sind eine Privatpraxis \u2013 die Behandlung wird nicht \u00fcber die gesetzliche Krankenkasse abgerechnet, sondern privat in Rechnung gestellt (auch bei privater Krankenversicherung reichen Sie die Rechnung im Nachhinein selbst ein).',
+          'Uns ist Zeit f\u00fcr Sie wichtig: Wir arbeiten gespr\u00e4chsorientiert, ohne Apparate, Spritzen oder klassische Diagnostik \u2013 im Mittelpunkt steht das ausf\u00fchrliche \u00e4rztliche Gespr\u00e4ch.',
+          'Wir verbinden fundierte Schulmedizin mit einer ganzheitlichen Perspektive \u2013 ehrlich und ohne Heilversprechen.'
         ].forEach(function(it){
           var p = document.createElement('p');
           p.style.cssText = 'margin:3px 0;';
-          p.textContent = '• ' + it;
+          p.textContent = '\u2022 ' + it;
           d.appendChild(p);
         });
         msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
@@ -418,14 +418,14 @@
       {l:'Ja', p:true, fn:function(){rmBtns(); user('Ja'); step5();}},
       {l:'Nein', fn:function(){
         rmBtns(); user('Nein');
-        bot('Vielen Dank für IhrBerständnis: Unsere Praxis richtet sich ausschließlich an volljährige Patientinnen und Patienten. Wir empfehlen Ihnen, sich an eine kinder- und jugendmedizinische Praxis zu wenden. Alles Gute für Sie!');
+        bot('Vielen Dank f\u00fcr Ihr Verst\u00e4ndnis: Unsere Praxis richtet sich ausschlie\u00dflich an vollj\u00e4hrige Patientinnen und Patienten. Wir empfehlen Ihnen, sich an eine kinder- und jugendmedizinische Praxis zu wenden. Alles Gute f\u00fcr Sie!');
       }}
     ]);
   }
 
   function step5(){
     setTimeout(function(){
-      bot('Jetzt würde ich gerne von Ilnen wissen: Worum geht es bei Ihrem Anliegen? Wählen Sie einfach die passende Kategorie – Sie bekommen direkt im Anschluss die wichtigsten Infos dazu.');
+      bot('Jetzt w\u00fcrde ich gerne von Ihnen wissen: Worum geht es bei Ihrem Anliegen? W\u00e4hlen Sie einfach die passende Kategorie \u2013 Sie bekommen direkt im Anschluss die wichtigsten Infos dazu.');
       setTimeout(function(){
         btns([
           {l:'Allgemeine Beratung', fn:function(){rmBtns(); user('Allgemeine Beratung'); selectedKat='Allgemeine Beratung'; showInfo();}},
@@ -451,14 +451,14 @@
 
   function showSonstiges(){
     setTimeout(function(){
-      bot('Kein Problem – schildern Sie uns Ihr Anliegen gerne kurz in eigenen Worten. Wir melden uns bei Ihnen mit den passenden Informationen.');
+      bot('Kein Problem \u2013 schildern Sie uns Ihr Anliegen gerne kurz in eigenen Worten. Wir melden uns bei Ihnen mit den passenden Informationen.');
       ia.style.display = 'flex'; inp.focus();
       window.ldSend = function(){
         var v = inp.value.trim(); if (!v) return;
         user(v); inp.value = ''; ia.style.display = 'none';
         window.ldSend = noop;
         setTimeout(function(){
-          bot('Vielen Dank! Wir werden uns bei Ihnen melden. Wie möchten Sie fortfahren?');
+          bot('Vielen Dank! Wir werden uns bei Ihnen melden. Wie m\u00f6chten Sie fortfahren?');
           setTimeout(step8, 500);
         }, 400);
       };
@@ -467,14 +467,14 @@
 
   function step6(){
     setTimeout(function(){
-      bot('Wie darf der Termin für Sie stattfinden — lieber persönlich vor Ort oder als Videosprechstunde?');
+      bot('Wie darf der Termin f\u00fcr Sie stattfinden \u2013 lieber pers\u00f6nlich vor Ort oder als Videosprechstunde?');
       btns([
         {l:'Vor Ort', p:true, fn:function(){rmBtns(); user('Vor Ort'); step7();}},
         {l:'Videosprechstunde', fn:function(){
           rmBtns(); user('Videosprechstunde');
           if (selectedKat !== 'Gutachten') {
             setTimeout(function(){
-              bot('Für Ihr Anliegen möchten wir Sie beim ersten Termin gerne persönlich in der Praxis kennenlernen — das dient Ihrer Sicherheit und einer sorgfältigen*ersten Einschätzung. Videotermine sind wunderbar ab dem Folgetermin möglich.');
+              bot('F\u00fcr Ihr Anliegen m\u00f6chten wir Sie beim ersten Termin gerne pers\u00f6nlich in der Praxis kennenlernen \u2013 das dient Ihrer Sicherheit und einer sorgf\u00e4ltigen ersten Einsch\u00e4tzung. Videotermine sind wunderbar ab dem Folgetermin m\u00f6glich.');
               setTimeout(function(){
                 btns([{l:'Alles klar, weiter', p:true, fn:function(){rmBtns(); step7();}}]);
               }, 400);
@@ -487,7 +487,7 @@
 
   function step7(){
     setTimeout(function(){
-      bot('Noch ein wichtiger Hinweis, damit Sie gut vorbereitet zu uns kommen: Nach Ihrer Terminbuchung erhalten Sie elektronisch die wichtigsten Unterlagen — darunter Honorarvereinbarung, Datenschutzinformationen und Aufklärung zur Abrechnung nach GOA. Falls Sie diese lieber vor Ort erhalten möchten, legen wir sie Ihnen selbstverständlich direkt vor dem Termin vor. Die Bezahlung erfolgt nach dem Termin per Rechnung – bequem per Uberweisung oder vor Ort per Karte.');
+      bot('Noch ein wichtiger Hinweis, damit Sie gut vorbereitet zu uns kommen: Nach Ihrer Terminbuchung erhalten Sie elektronisch die wichtigsten Unterlagen \u2013 darunter Honorarvereinbarung, Datenschutzinformationen und Aufkl\u00e4rung zur Abrechnung nach GO\u00c4. Falls Sie diese lieber vor Ort erhalten m\u00f6chten, legen wir sie Ihnen selbstverst\u00e4ndlich direkt vor dem Termin vor. Die Bezahlung erfolgt nach dem Termin per Rechnung \u2013 bequem per \u00dcberweisung oder vor Ort per Karte.');
       setTimeout(function(){
         btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step8();}}]);
       }, 400);
@@ -496,7 +496,7 @@
 
   function step8(){
     setTimeout(function(){
-      bot('Ganz hzzlichen Dank, dass Sie sich die Zeit genommen haben und wir Sie ein Stück kennenlernen durften! Jetzt haben Sie zwei Möglichkeiten:');
+      bot('Ganz herzlichen Dank, dass Sie sich die Zeit genommen haben und wir Sie ein St\u00fcck kennenlernen durften! Jetzt haben Sie zwei M\u00f6glichkeiten:');
       setTimeout(function(){
         var r = document.createElement('div');
         r.className = 'ld-row';
@@ -506,7 +506,7 @@
         ja.className = 'ld-b p';
         ja.style.cssText = 'text-decoration:none;text-align:center;display:block;';
         ja.href = '#';
-        ja.textContent = 'Termin direkt über Jameda buchen';
+        ja.textContent = 'Termin direkt \u00fcber Jameda buchen';
         ja.onclick = function(e){
           e.preventDefault();
           window.ldToggle();
@@ -517,33 +517,18 @@
 
         var disc = document.createElement('p');
         disc.style.cssText = 'font-size:11px;color:#888;margin:4px 0 0;line-height:1.4;padding:0 4px;';
-        disc.textContent = '❢️ Über WhatsApp klären wir gerne organisatorische Fragen (z. B. Terminverfügbarkeit, allgemeine Abläufe). Medizinische Anliegen, Symptome oder Rezeptfragen besprechen wir ausschließlich im persönlichen Gespräch oder in der Videosprechstunde.';
+        disc.textContent = '\u26a0\ufe0f \u00dcber WhatsApp kl\u00e4ren wir gerne organisatorische Fragen (z. B. Terminverf\u00fcgbarkeit, allgemeine Abl\u00e4ufe). Medizinische Anliegen, Symptome oder Rezeptfragen besprechen wir ausschlie\u00dflich im pers\u00f6nlichen Gespr\u00e4ch oder in der Videosprechstunde.';
         r.appendChild(disc);
 
-        var wab = document.createElement('button');
+        var wab = document.createElement('a');
         wab.className = 'ld-b';
-        wab.style.cssText = 'text-align:center;width:100%;';
+        wab.style.cssText = 'text-decoration:none;text-align:center;display:block;';
+        wab.href = '#';
         wab.textContent = 'Organisatorische Frage per WhatsApp';
-        wab.onclick = function(){
-          wab.style.display = 'none';
-          var wrow = document.createElement('div');
-          wrow.style.cssText = 'display:flex;flex-direction:columnap:6px;margin-top:2px;';
-          var wc = document.createElement('a');
-          wc.className = 'ld-b';
-          wc.style.cssText = 'text-decoration:none;text-align:center;display:block;font-size:13px;';
-          wc.href = 'https://wa.me/4915225370653';
-          wc.target = '_blank';
-          wc.textContent = '👲 Cihan: +49 152 2537 0653';
-          wrow.appendChild(wc);
-          var ws = document.createElement('a');
-          ws.className = 'ld-b';
-          ws.style.cssText = 'text-decoration:none;text-align:center;display:block;font-size:13px;';
-          ws.href = 'https://wa.me/491791492233';
-          ws.target = '_blank';
-          ws.textContent = '👲 Suzel: +49 179 149 2233';
-          wrow.appendChild(ws);
-          r.appendChild(wrow);
-          msgs.scrollTop = msgs.scrollHeight;
+        wab.onclick = function(e){
+          e.preventDefault();
+          window.ldToggle();
+          if (typeof openWAModal === 'function') openWAModal();
         };
         r.appendChild(wab);
 
@@ -562,7 +547,7 @@
 
   function bot(t){ var d=document.createElement('div'); d.className='ld-m b'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
   function user(t){ var d=document.createElement('div'); d.className='ld-m u'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
-  function btns(arr){ var r=document.createElement('div'); r.className='ld-row'; arr.forEach(function(b){ var btn=document.createElement('button'); btn.className='ld-b'+(b.p?' p':'''); btn.textContent=b.l; btn.onclick=b.fn; r.appendChild(btn); }); msgs.appendChild(r); msgs.scrollTop=msgs.scrollHeight; }
+  function btns(arr){ var r=document.createElement('div'); r.className='ld-row'; arr.forEach(function(b){ var btn=document.createElement('button'); btn.className='ld-b'+(b.p?' p':''); btn.textContent=b.l; btn.onclick=b.fn; r.appendChild(btn); }); msgs.appendChild(r); msgs.scrollTop=msgs.scrollHeight; }
   function rmBtns(){ msgs.querySelectorAll('.ld-row').forEach(function(r){r.remove();}); }
 })();
 
