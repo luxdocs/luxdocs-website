@@ -269,5 +269,145 @@
   })();
 </script>
 
+
+<style>
+#ld-chat-bubble{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#15311a;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.22);z-index:9999;transition:transform .2s}
+#ld-chat-bubble:hover{transform:scale(1.08)}
+#ld-chat-bubble svg{width:26px;height:26px;fill:#fff}
+#ld-chat-window{position:fixed;bottom:92px;right:24px;width:340px;max-height:520px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.16);display:flex;flex-direction:column;z-index:9998;overflow:hidden;opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;transition:all .25s ease}
+#ld-chat-window.ld-open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+#ld-chat-header{background:#15311a;color:#fff;padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.ld-hlogo{font-size:16px;font-weight:700;letter-spacing:-.3px}.ld-hlogo span{color:#7bc47f}
+.ld-hstatus{font-size:11px;opacity:.7;margin-left:auto}
+#ld-chat-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0;line-height:1;opacity:.8}
+#ld-chat-msgs{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:9px}
+.ld-m{max-width:85%;padding:10px 13px;border-radius:12px;font-size:13.5px;line-height:1.5;animation:ldf .2s ease}
+.ld-m.b{background:#f0f4f1;color:#1a1a1a;border-bottom-left-radius:3px;align-self:flex-start}
+.ld-m.u{background:#15311a;color:#fff;border-bottom-right-radius:3px;align-self:flex-end}
+.ld-row{display:flex;flex-wrap:wrap;gap:7px;align-self:flex-start;animation:ldf .2s ease}
+.ld-b{background:#fff;border:1.5px solid #15311a;color:#15311a;border-radius:20px;padding:7px 14px;font-size:13px;cursor:pointer;transition:all .15s;font-family:inherit}
+.ld-b:hover,.ld-b.p{background:#15311a;color:#fff}
+.ld-b.p{font-weight:600}
+#ld-input-area{display:flex;padding:10px 12px;gap:8px;border-top:1px solid #eee;flex-shrink:0}
+#ld-inp{flex:1;border:1.5px solid #ddd;border-radius:20px;padding:8px 14px;font-size:13.5px;outline:none;font-family:inherit;transition:border-color .15s}
+#ld-inp:focus{border-color:#15311a}
+#ld-send{background:#15311a;border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+#ld-send:hover{background:#0d2010}
+#ld-send svg{fill:#fff;width:16px;height:16px}
+@keyframes ldf{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){#ld-chat-window{width:calc(100vw - 20px);right:10px;bottom:80px}}
+</style>
+
+<div id="ld-chat-bubble" onclick="ldToggle()">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.68 1.19 5.09 3.09 6.78L4 22l4.46-1.49C9.55 20.83 10.74 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+</div>
+<div id="ld-chat-window">
+  <div id="ld-chat-header">
+    <div class="ld-hlogo">Lux<span>Docs</span></div>
+    <div class="ld-hstatus">&#9679; Online</div>
+    <button id="ld-chat-close" onclick="ldToggle()">&#215;</button>
+  </div>
+  <div id="ld-chat-msgs"></div>
+  <div id="ld-input-area">
+    <input id="ld-inp" type="text" placeholder="Nachricht eingeben ..." onkeydown="if(event.key==='Enter')ldSend()">
+    <button id="ld-send" onclick="ldSend()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var WA='4915225370653';
+  var NOTIFY='bop_baracke4w@icloud.com';
+  var ans={},step=0,open=false;
+  var STEPS=[
+    {k:'beschwerde',q:'Was beschaeftigt dich gerade gesundheitlich?',t:'text'},
+    {k:'seit_wann', q:'Seit wann hast du diese Beschwerden?',t:'text'},
+    {k:'behandlung',q:'Wurdest du dafuer schon behandelt?',t:'text'},
+    {k:'vers',q:'Bist du privat versichert oder Selbstzahler?',t:'btn',opts:['Privat versichert','Selbstzahler']},
+    {k:'art', q:'Lieber Videosprechstunde oder persoenlich in Huerth?',t:'btn',opts:['Videosprechstunde','Vor Ort in Huerth']},
+    {k:'name',q:'Wie ist dein Name?',t:'text'}
+  ];
+  var msgs=document.getElementById('ld-chat-msgs');
+  var inp=document.getElementById('ld-inp');
+  var ia=document.getElementById('ld-input-area');
+
+  window.ldToggle=function(){
+    open=!open;
+    document.getElementById('ld-chat-window').classList.toggle('ld-open',open);
+    if(open&&step===0)setTimeout(greet,350);
+    if(open)inp.focus();
+  };
+
+  function greet(){
+    bot('Hallo und herzlich willkommen bei LuxDocs! 👋');
+    setTimeout(function(){
+      bot('Schoen, dass du dir Zeit nimmst. Wir gehen gemeinsam ein paar kurze Fragen durch, damit wir schon vorab das Wichtigste ueber dein Anliegen wissen — und dich dann direkt zum naechsten Schritt bringen.');
+      setTimeout(function(){
+        btns([{l:'Los geht's →',p:true,fn:function(){rmBtns();step=1;ask();}}]);
+      },500);
+    },700);
+  }
+
+  function ask(){
+    if(step>STEPS.length)return;
+    var s=STEPS[step-1];
+    setTimeout(function(){
+      bot(s.q);
+      if(s.t==='btn'){
+        ia.style.display='none';
+        btns(s.opts.map(function(o){return{l:o,fn:function(){rmBtns();ans[s.k]=o;user(o);ia.style.display='flex';step++;step<=STEPS.length?ask():finish();}};}));
+      }
+    },350);
+  }
+
+  window.ldSend=function(){
+    var v=inp.value.trim();if(!v||step===0)return;
+    var s=STEPS[step-1];if(!s||s.t!=='text')return;
+    user(v);ans[s.k]=v;inp.value='';step++;
+    step<=STEPS.length?ask():finish();
+  };
+
+  function finish(){
+    ia.style.display='none';
+    var n=ans.name||'dir';
+    setTimeout(function(){
+      bot('Danke, '+n+'! Wir haben jetzt alles was wir brauchen. 🙌');
+      setTimeout(function(){
+        bot('Klick unten auf den Button — deine Angaben werden in WhatsApp schon vorausgefuellt, du musst nur noch absenden.');
+        setTimeout(function(){
+          var txt='Hallo LuxDocs Team!
+
+Mein Name ist '+(ans.name||'–')+
+            '
+Anliegen: '+(ans.beschwerde||'–')+
+            '
+Seit wann: '+(ans.seit_wann||'–')+
+            '
+Bereits behandelt: '+(ans.behandlung||'–')+
+            '
+Versicherung: '+(ans.vers||'–')+
+            '
+Termin: '+(ans.art||'–');
+          btns([{l:'WhatsApp oeffnen →',p:true,fn:function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank');}}]);
+          notify(n);
+        },450);
+      },650);
+    },400);
+  }
+
+  function notify(name){
+    var b='Neue LuxDocs Chat-Anfrage%0A%0AName: '+(ans.name||'?')+'%0AAnliegen: '+(ans.beschwerde||'?')+'%0ASeit wann: '+(ans.seit_wann||'?')+'%0ABehandelt: '+(ans.behandlung||'?')+'%0AVersicherung: '+(ans.vers||'?')+'%0ATermin: '+(ans.art||'?');
+    var a=document.createElement('a');
+    a.href='mailto:'+NOTIFY+'?subject=LuxDocs%20–%20Neue%20Anfrage%20von%20'+encodeURIComponent(ans.name||'Unbekannt')+'&body='+b;
+    a.style.display='none';document.body.appendChild(a);a.click();
+    setTimeout(function(){document.body.removeChild(a);},1000);
+  }
+
+  function bot(t){var d=document.createElement('div');d.className='ld-m b';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function user(t){var d=document.createElement('div');d.className='ld-m u';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function btns(arr){var r=document.createElement('div');r.className='ld-row';arr.forEach(function(b){var btn=document.createElement('button');btn.className='ld-b'+(b.p?' p':'');btn.textContent=b.l;btn.onclick=b.fn;r.appendChild(btn);});msgs.appendChild(r);msgs.scrollTop=msgs.scrollHeight;}
+  function rmBtns(){msgs.querySelectorAll('.ld-row').forEach(function(r){r.remove();});}
+})();
+</script>
 </body>
 </html>
