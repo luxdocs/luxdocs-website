@@ -375,19 +375,7 @@
       setTimeout(function(){
         bot('Klick unten auf den Button — deine Angaben werden in WhatsApp schon vorausgefuellt, du musst nur noch absenden.');
         setTimeout(function(){
-          var txt='Hallo LuxDocs Team!
-
-Mein Name ist '+(ans.name||'–')+
-            '
-Anliegen: '+(ans.beschwerde||'–')+
-            '
-Seit wann: '+(ans.seit_wann||'–')+
-            '
-Bereits behandelt: '+(ans.behandlung||'–')+
-            '
-Versicherung: '+(ans.vers||'–')+
-            '
-Termin: '+(ans.art||'–');
+          var txt='Hallo LuxDocs Team!\n\nMein Name ist '+(ans.name||'-')+'\nAnliegen: '+(ans.beschwerde||'-')+'\nSeit wann: '+(ans.seit_wann||'-')+'\nBereits behandelt: '+(ans.behandlung||'-')+'\nVersicherung: '+(ans.vers||'-')+'\nTermin: '+(ans.art||'-');
           btns([{l:'WhatsApp oeffnen →',p:true,fn:function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank');}}]);
           notify(n);
         },450);
