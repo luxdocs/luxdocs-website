@@ -112,6 +112,7 @@
         <li><b>Sprachen:</b> Deutsch, Englisch, Spanisch, Portugiesisch</li>
       </ul>
       <a class="btn btn-primary btn-small" href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Termin bei Suzel buchen</a>
+      <a class="icon-link" href="https://wa.me/491791492233" target="_blank" rel="noopener" style="margin-top:10px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp anfragen</a>
     </div>
   </div>
 </section>
@@ -190,7 +191,8 @@
       <div>
         <h3>Kontakt</h3>
         <p><a href="tel:+4922335455081">Telefon: 02233 5455081</a></p>
-        <p><a href="https://wa.me/4915225370653" target="_blank" rel="noopener">WhatsApp: +49 152 2537 0653</a></p>
+        <p><a href="https://wa.me/4915225370653" target="_blank" rel="noopener">WhatsApp Cihan: +49 152 2537 0653</a></p>
+        <p><a href="https://wa.me/491791492233" target="_blank" rel="noopener">WhatsApp Suzel: +49 179 149 2233</a></p>
         <p><a href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Cihan Metin Yildirimtürk, Termin über Jameda</a></p>
         <p><a href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Suzel Hammer, Termin über Jameda</a></p>
       </div>
@@ -316,86 +318,220 @@
 
 <script>
 (function(){
-  var WA='4915225370653';
-  var NOTIFY='bop_baracke4w@icloud.com';
-  var ans={},step=0,open=false;
-  var STEPS=[
-    {k:'beschwerde',q:'Was beschaeftigt dich gerade gesundheitlich?',t:'text'},
-    {k:'seit_wann', q:'Seit wann hast du diese Beschwerden?',t:'text'},
-    {k:'behandlung',q:'Wurdest du dafuer schon behandelt?',t:'text'},
-    {k:'vers',q:'Bist du privat versichert oder Selbstzahler?',t:'btn',opts:['Privat versichert','Selbstzahler']},
-    {k:'art', q:'Lieber Videosprechstunde oder persoenlich in Huerth?',t:'btn',opts:['Videosprechstunde','Vor Ort in Huerth']},
-    {k:'name',q:'Wie ist dein Name?',t:'text'}
-  ];
-  var msgs=document.getElementById('ld-chat-msgs');
-  var inp=document.getElementById('ld-inp');
-  var ia=document.getElementById('ld-input-area');
+  var WA = '4915225370653';
+  var open = false;
+  var selectedKat = '';
+  var msgs = document.getElementById('ld-chat-msgs');
+  var inp = document.getElementById('ld-inp');
+  var ia = document.getElementById('ld-input-area');
 
-  window.ldToggle=function(){
-    open=!open;
-    document.getElementById('ld-chat-window').classList.toggle('ld-open',open);
-    if(open&&step===0)setTimeout(greet,350);
-    if(open)inp.focus();
+  var KI = {
+    'Allgemeine Beratung': 'Fuer ein allgemeines Beratungsgespraech nehmen wir uns ausfuehrlich Zeit fuer Ihre Situation. Kosten: ca. 160â220Â â¬ fuer die Erstvorstellung (abhaengig vom Aufwand), Folgetermine ca. 40â70Â â¬. Der erste Termin findet persoenlich in der Praxis statt.',
+    'Medizinisches Cannabis': 'Die Erstvorstellung findet grundsaetzlich persoenlich vor Ort statt, nicht per Video. Ob eine Cannabistherapie infrage kommt, entscheidet sich erst nach ausfuehrlicher aerztlicher Pruefung â ein Rezept ist zu keinem Zeitpunkt garantiert. Mindestens einmal pro Quartal ist ein persoenlicher Termin erforderlich. Kosten: Erstvorstellung ca. 140â220Â â¬, Folgetermine ca. 40â70Â â¬.',
+    'Hormonelle Themen': 'Bei hormonellen Themen (z.B. Testosteronmangel, Wechseljahre) besprechen wir zunaechst Ihre Symptome und veranlassen bei Bedarf eine Blutuntersuchung extern. Befundbesprechung auch per Video moeglich. Kosten: Erstgespraech ca. 140â160Â â¬, Folgebesprechung ca. 40â70Â â¬ (Laborkosten fallen separat an).',
+    'Chronische Schmerzen': 'Bei chronischen Schmerzen betrachten wir Ihre Beschwerden im Gesamtzusammenhang â Vorgeschichte, Lebensumstaende, bisherige Behandlungen. Kosten: Erstvorstellung ca. 160â220Â â¬, Folgetermine ca. 40â70Â â¬. Erster Termin persoenlich, Verlaufstermine auch per Video moeglich.',
+    'Blutuntersuchung': 'Wir besprechen Ihre Symptome und stellen bei Bedarf einen Laborzettel fuer externe Blutabnahme aus. Ergebnisbesprechung auch per Video moeglich. Kosten: Erstgespraech ca. 160â220Â â¬, Befundbesprechung ca. 40â70Â â¬ (Laborkosten separat).',
+    'Gutachten': 'Fuer schriftliche gutachtliche Stellungnahmen: ab ca. 40Â â¬ (kurze Stellungnahme) bis 100Â â¬+ pro Stunde. Der genaue Umfang wird vorab besprochen.'
   };
 
-  function greet(){
-    bot('Hallo und herzlich willkommen bei LuxDocs! 👋');
-    setTimeout(function(){
-      bot('Schoen, dass du dir Zeit nimmst. Wir gehen gemeinsam ein paar kurze Fragen durch, damit wir schon vorab das Wichtigste ueber dein Anliegen wissen — und dich dann direkt zum naechsten Schritt bringen.');
-      setTimeout(function(){
-        btns([{l:'Weiter →',p:true,fn:function(){rmBtns();step=1;ask();}}]);
-      },500);
-    },700);
-  }
-
-  function ask(){
-    if(step>STEPS.length)return;
-    var s=STEPS[step-1];
-    setTimeout(function(){
-      bot(s.q);
-      if(s.t==='btn'){
-        ia.style.display='none';
-        btns(s.opts.map(function(o){return{l:o,fn:function(){rmBtns();ans[s.k]=o;user(o);ia.style.display='flex';step++;step<=STEPS.length?ask():finish();}};}));
-      }
-    },350);
-  }
-
-  window.ldSend=function(){
-    var v=inp.value.trim();if(!v||step===0)return;
-    var s=STEPS[step-1];if(!s||s.t!=='text')return;
-    user(v);ans[s.k]=v;inp.value='';step++;
-    step<=STEPS.length?ask():finish();
+  window.ldToggle = function(){
+    open = !open;
+    document.getElementById('ld-chat-window').classList.toggle('ld-open', open);
+    if (open && msgs.children.length === 0) setTimeout(step1, 350);
+    if (open) inp.focus();
   };
 
-  function finish(){
-    ia.style.display='none';
-    var n=ans.name||'dir';
+  function step1(){
+    ia.style.display = 'none';
+    bot('Willkommen bei Praxis LuxDocs! Ich helfe Ihnen in ein paar kurzen Schritten herauszufinden, welches Angebot zu Ihrem Anliegen passt â inklusive Infos zu Ablauf und Kosten. Das dauert etwa 1â2 Minuten.');
     setTimeout(function(){
-      bot('Danke, '+n+'! Wir haben jetzt alles was wir brauchen. 🙌');
+      btns([{l:'Los gehtâs', p:true, fn:function(){rmBtns(); step2();}}]);
+    }, 600);
+  }
+
+  function step2(){
+    bot('Bevor wir starten: Handelt es sich um einen akuten medizinischen Notfall?');
+    btns([
+      {l:'Nein', p:true, fn:function(){rmBtns(); user('Nein'); step3();}},
+      {l:'Ja â Notfall', fn:function(){
+        rmBtns(); user('Ja');
+        bot('Bitte wenden Sie sich sofort an den Notruf (112) oder die naechste Notaufnahme. Unsere Praxis ist fuer geplante Beratungstermine ausgerichtet und nicht fuer Akutversorgung geeignet.');
+      }}
+    ]);
+  }
+
+  function step3(){
+    setTimeout(function(){
+      bot('Kurz zu uns, damit Sie wissen, worauf Sie sich einlassen:');
       setTimeout(function(){
-        bot('Klick unten auf den Button — deine Angaben werden in WhatsApp schon vorausgefuellt, du musst nur noch absenden.');
+        var d = document.createElement('div'); d.className = 'ld-m b';
+        [
+          'Privatpraxis â keine Abrechnung ueber die gesetzliche Krankenkasse (auch privat Versicherte: Vorleistung, Erstattung nicht garantiert).',
+          'Gespraechsorientiert, ohne Apparate, Spritzen oder klassische Diagnostik.',
+          'Fundierte Schulmedizin mit ganzheitlicher Perspektive â ohne Heilversprechen.'
+        ].forEach(function(it){
+          var p = document.createElement('p');
+          p.style.cssText = 'margin:3px 0;';
+          p.textContent = 'â¢ ' + it;
+          d.appendChild(p);
+        });
+        msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
         setTimeout(function(){
-          var txt='Hallo LuxDocs Team!\n\nMein Name ist '+(ans.name||'-')+'\nAnliegen: '+(ans.beschwerde||'-')+'\nSeit wann: '+(ans.seit_wann||'-')+'\nBereits behandelt: '+(ans.behandlung||'-')+'\nVersicherung: '+(ans.vers||'-')+'\nTermin: '+(ans.art||'-');
-          btns([{l:'WhatsApp oeffnen →',p:true,fn:function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank');}}]);
-          notify(n);
-        },450);
-      },650);
-    },400);
+          btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step4();}}]);
+        }, 400);
+      }, 500);
+    }, 400);
   }
 
-  function notify(name){
-    var b='Neue LuxDocs Chat-Anfrage%0A%0AName: '+(ans.name||'?')+'%0AAnliegen: '+(ans.beschwerde||'?')+'%0ASeit wann: '+(ans.seit_wann||'?')+'%0ABehandelt: '+(ans.behandlung||'?')+'%0AVersicherung: '+(ans.vers||'?')+'%0ATermin: '+(ans.art||'?');
-    var a=document.createElement('a');
-    a.href='mailto:'+NOTIFY+'?subject=LuxDocs%20–%20Neue%20Anfrage%20von%20'+encodeURIComponent(ans.name||'Unbekannt')+'&body='+b;
-    a.style.display='none';document.body.appendChild(a);a.click();
-    setTimeout(function(){document.body.removeChild(a);},1000);
+  function step4(){
+    bot('Sind Sie mindestens 18 Jahre alt?');
+    btns([
+      {l:'Ja', p:true, fn:function(){rmBtns(); user('Ja'); step5();}},
+      {l:'Nein', fn:function(){
+        rmBtns(); user('Nein');
+        bot('Unsere Praxis richtet sich ausschliesslich an Volljahrige. Bitte wenden Sie sich an eine kinder- und jugendmedizinische Praxis.');
+      }}
+    ]);
   }
 
-  function bot(t){var d=document.createElement('div');d.className='ld-m b';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
-  function user(t){var d=document.createElement('div');d.className='ld-m u';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
-  function btns(arr){var r=document.createElement('div');r.className='ld-row';arr.forEach(function(b){var btn=document.createElement('button');btn.className='ld-b'+(b.p?' p':'');btn.textContent=b.l;btn.onclick=b.fn;r.appendChild(btn);});msgs.appendChild(r);msgs.scrollTop=msgs.scrollHeight;}
-  function rmBtns(){msgs.querySelectorAll('.ld-row').forEach(function(r){r.remove();});}
+  function step5(){
+    setTimeout(function(){
+      bot('Worum geht es bei Ihrem Anliegen? Waehlen Sie die passende Kategorie â Sie erhalten direkt im Anschluss die wichtigsten Infos dazu:');
+      setTimeout(function(){
+        btns([
+          {l:'Allgemeine Beratung', fn:function(){rmBtns(); user('Allgemeine Beratung'); selectedKat='Allgemeine Beratung'; showInfo();}},
+          {l:'Medizinisches Cannabis', fn:function(){rmBtns(); user('Medizinisches Cannabis'); selectedKat='Medizinisches Cannabis'; showInfo();}},
+          {l:'Hormonelle Themen', fn:function(){rmBtns(); user('Hormonelle Themen'); selectedKat='Hormonelle Themen'; showInfo();}},
+          {l:'Chronische Schmerzen', fn:function(){rmBtns(); user('Chronische Schmerzen'); selectedKat='Chronische Schmerzen'; showInfo();}},
+          {l:'Blutuntersuchung', fn:function(){rmBtns(); user('Blutuntersuchung'); selectedKat='Blutuntersuchung'; showInfo();}},
+          {l:'Gutachten', fn:function(){rmBtns(); user('Gutachten'); selectedKat='Gutachten'; showInfo();}},
+          {l:'Sonstiges', fn:function(){rmBtns(); user('Sonstiges'); selectedKat='Sonstiges'; showSonstiges();}}
+        ]);
+      }, 400);
+    }, 400);
+  }
+
+  function showInfo(){
+    setTimeout(function(){
+      bot(KI[selectedKat]);
+      setTimeout(function(){
+        btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step6();}}]);
+      }, 500);
+    }, 400);
+  }
+
+  function showSonstiges(){
+    setTimeout(function(){
+      bot('Kein Problem â schildern Sie uns Ihr Anliegen kurz in eigenen Worten, wir melden uns mit passenden Informationen:');
+      ia.style.display = 'flex'; inp.focus();
+      window.ldSend = function(){
+        var v = inp.value.trim(); if (!v) return;
+        user(v); inp.value = ''; ia.style.display = 'none';
+        window.ldSend = noop;
+        setTimeout(function(){
+          bot('Danke. Wir werden uns bei Ihnen melden. Wie moechten Sie fortfahren?');
+          setTimeout(step8, 500);
+        }, 400);
+      };
+    }, 400);
+  }
+
+  function step6(){
+    setTimeout(function(){
+      bot('Moechten Sie einen Termin vor Ort oder eine Videosprechstunde?');
+      btns([
+        {l:'Vor Ort', p:true, fn:function(){rmBtns(); user('Vor Ort'); step7();}},
+        {l:'Videosprechstunde', fn:function(){
+          rmBtns(); user('Videosprechstunde');
+          if (selectedKat !== 'Gutachten') {
+            setTimeout(function(){
+              bot('Hinweis: Fuer Ihr Anliegen ist beim ersten Termin ein persoenlicher Besuch in der Praxis erforderlich â das dient Ihrer Sicherheit und einer sorgfaeltigen Erstuntersuchung. Videotermine sind ab dem Folgetermin moeglich.');
+              setTimeout(function(){
+                btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step7();}}]);
+              }, 400);
+            }, 400);
+          } else { step7(); }
+        }}
+      ]);
+    }, 400);
+  }
+
+  function step7(){
+    setTimeout(function(){
+      bot('Kurzer Hinweis zur Zahlung: Sie erhalten nach dem Termin eine Rechnung nach GOA (Gebuehrenordnung fuer Aerzte), zahlbar per Ueberweisung oder Karte. Bei privater Krankenversicherung reichen Sie die Rechnung selbst bei Ihrer Versicherung ein.');
+      setTimeout(function(){
+        btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step8();}}]);
+      }, 400);
+    }, 400);
+  }
+
+    function step8(){
+    setTimeout(function(){
+      bot('Alles klar, vielen Dank! Sie haben jetzt zwei Moeglichkeiten:');
+      setTimeout(function(){
+        var r = document.createElement('div');
+        r.className = 'ld-row';
+        r.style.cssText = 'flex-direction:column;gap:8px;align-self:stretch;';
+
+        var ja = document.createElement('a');
+        ja.className = 'ld-b p';
+        ja.style.cssText = 'text-decoration:none;text-align:center;display:block;';
+        ja.href = '#';
+        ja.textContent = 'Termin direkt ueber Jameda buchen';
+        ja.onclick = function(e){
+          e.preventDefault();
+          window.ldToggle();
+          var m = document.getElementById('bookingModal');
+          if (m){ m.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+        };
+        r.appendChild(ja);
+
+        var wab = document.createElement('button');
+        wab.className = 'ld-b';
+        wab.style.cssText = 'text-align:center;width:100%;';
+        wab.textContent = 'Organisatorische Frage per WhatsApp';
+        wab.onclick = function(){
+          wab.style.display = 'none';
+          var wrow = document.createElement('div');
+          wrow.style.cssText = 'display:flex;flex-direction:column;gap:6px;margin-top:2px;';
+          var wc = document.createElement('a');
+          wc.className = 'ld-b';
+          wc.style.cssText = 'text-decoration:none;text-align:center;display:block;font-size:13px;';
+          wc.href = 'https://wa.me/4915225370653';
+          wc.target = '_blank';
+          wc.textContent = 'ð± Cihan: +49 152 2537 0653';
+          wrow.appendChild(wc);
+          var ws = document.createElement('a');
+          ws.className = 'ld-b';
+          ws.style.cssText = 'text-decoration:none;text-align:center;display:block;font-size:13px;';
+          ws.href = 'https://wa.me/491791492233';
+          ws.target = '_blank';
+          ws.textContent = 'ð± Suzel: +49 179 149 2233';
+          wrow.appendChild(ws);
+          r.appendChild(wrow);
+          msgs.scrollTop = msgs.scrollHeight;
+        };
+        r.appendChild(wab);
+
+        var disc = document.createElement('p');
+        disc.style.cssText = 'font-size:11px;color:#888;margin:6px 0 0;line-height:1.4;padding:0 4px;';
+        disc.textContent = 'â  Ueber WhatsApp klaeren wir ausschliesslich organisatorische Fragen (z.B. Terminverfuegbarkeit). Medizinische Anliegen, Symptome oder Rezeptfragen werden ausschliesslich im persoenlichen Gespraech besprochen.';
+        r.appendChild(disc);
+
+        msgs.appendChild(r); msgs.scrollTop = msgs.scrollHeight;
+      }, 500);
+    }, 400);
+  }
+
+function noop(){}
+  window.ldSend = noop;
+
+  function bot(t){ var d=document.createElement('div'); d.className='ld-m b'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
+  function user(t){ var d=document.createElement('div'); d.className='ld-m u'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
+  function btns(arr){ var r=document.createElement('div'); r.className='ld-row'; arr.forEach(function(b){ var btn=document.createElement('button'); btn.className='ld-b'+(b.p?' p':''); btn.textContent=b.l; btn.onclick=b.fn; r.appendChild(btn); }); msgs.appendChild(r); msgs.scrollTop=msgs.scrollHeight; }
+  function rmBtns(){ msgs.querySelectorAll('.ld-row').forEach(function(r){r.remove();}); }
 })();
+
 </script>
 </body>
 </html>
