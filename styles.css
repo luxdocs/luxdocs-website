@@ -767,6 +767,6 @@ footer{
   .event-card{padding:24px 20px;}
   .event-highlight{flex-direction:column;gap:16px;padding:16px;}
   .event-location-block{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,0.15);padding-top:14px;}
-  .event-cta{width:100%;text-align:center;justify-content:center;}
+  .event-cta{width:100%;text-align:center;justify-content:center;white-space:normal;}
   .event-date-num{font-size:40px;}
 }
