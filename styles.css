@@ -616,6 +616,56 @@ footer{
   margin:12px 0 20px;
 }
 
+/* Map section */
+.map-section{
+  padding:0 0 64px;
+}
+.map-hint{
+  font-size:15px;
+  color:var(--muted);
+  margin-bottom:16px;
+  font-style:italic;
+}
+.map-wrapper{
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 4px 16px rgba(21,49,26,0.08);
+}
+
+/* Map section */
+.map-section{
+  padding:0 0 64px;
+}
+.map-hint{
+  font-size:15px;
+  color:var(--muted);
+  margin-bottom:16px;
+  font-style:italic;
+}
+.map-wrapper{
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 4px 16px rgba(21,49,26,0.08);
+}
+
+/* Map section */
+.map-section{
+  padding:0 0 64px;
+}
+.map-hint{
+  font-size:15px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.map-wrapper{
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 4px 16px rgba(21,49,26,0.08);
+}
+
 @media (max-width:820px){
   h1{font-size:34px;}
   .nav-links{display:none;}
