@@ -21,6 +21,111 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","name":"LuxDocs","description":"Privatpraxis für ganzheitliche Medizin, Cannabis-Sprechstunde und Naturmedizin in Hürth bei Köln","url":"https://luxdocs.de","telephone":"+4922335455081","address":{"@type":"PostalAddress","addressLocality":"Hürth","postalCode":"50354","addressCountry":"DE"},"medicalSpecialty":["Cannabis-Therapie","Naturmedizin","Ganzheitliche Medizin"],"priceRange":"€€","paymentAccepted":"Selbstzahler, Privatversicherung"}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://luxdocs.de/#clinic",
+      "name": "LuxDocs",
+      "description": "Cannabinoidtherapie, integrative Naturheilkunde und ganzheitliche Medizin in Hürth bei Köln.",
+      "url": "https://luxdocs.de",
+      "telephone": "+4922335455081",
+      "email": "info@luxdocs.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "An der Hasenkaule 10",
+        "addressLocality": "Hürth",
+        "postalCode": "50354",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.880444,
+        "longitude": 6.907343
+      },
+      "priceRange": "€€",
+      "paymentAccepted": "Selbstzahler, Privatversicherung",
+      "medicalSpecialty": "IntegrativeMedicine",
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Cannabinoidtherapie"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Medizinisches Cannabis"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Integrative Naturheilkunde"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Präventionsmedizin"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Ganzheitliche Medizin"
+        }
+      ],
+      "hasMap": "https://maps.google.com/maps?q=50.880444,6.907343",
+      "sameAs": [
+        "https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth",
+        "https://www.jameda.de/suzel-hammer/arzt/huerth"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://luxdocs.de/#cihan",
+      "name": "Cihan Metin Yildirimtürk",
+      "jobTitle": "Facharzt für Orthopädie, Unfallchirurgie und Notfallmedizin",
+      "description": "Facharzt für Orthopädie, Unfallchirurgie und Notfallmedizin mit Schwerpunkt integrative Naturheilkunde und Cannabinoidtherapie in Hürth.",
+      "worksFor": {
+        "@id": "https://luxdocs.de/#clinic"
+      },
+      "medicalSpecialty": [
+        "Orthopädie",
+        "Unfallchirurgie",
+        "Notfallmedizin",
+        "Integrative Naturheilkunde"
+      ],
+      "image": "https://luxdocs.de/images/cihan-portrait.jpg",
+      "sameAs": "https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth",
+      "knowsLanguage": [
+        "Deutsch",
+        "Türkisch",
+        "Englisch"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://luxdocs.de/#suzel",
+      "name": "Suzel Hammer",
+      "jobTitle": "Ärztin für ganzheitliche Medizin",
+      "description": "Ärztin für holistische Medizin mit Schwerpunkt Endocannabinoid-System, Psychosomatik und Cannabinoidtherapie in Hürth.",
+      "worksFor": {
+        "@id": "https://luxdocs.de/#clinic"
+      },
+      "medicalSpecialty": [
+        "Ganzheitliche Medizin",
+        "Psychosomatik",
+        "Cannabinoidtherapie"
+      ],
+      "image": "https://luxdocs.de/images/suzel-portrait.jpg",
+      "sameAs": "https://www.jameda.de/suzel-hammer/arzt/huerth",
+      "knowsLanguage": [
+        "Deutsch",
+        "Englisch",
+        "Spanisch",
+        "Portugiesisch"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -50,10 +155,10 @@
         </div>
       </div>
       <div class="eyebrow-row">
-        <span class="eyebrow">Ganzheitliche Naturmedizin Praxis in Hürth</span>
+        <span class="eyebrow">Cannabinoidtherapie &amp; Naturheilkunde in Hürth bei Köln</span>
         <span class="eyebrow eyebrow-b">Für Privatversicherte &amp; Selbstzahler</span>
       </div>
-      <h1>Ärztliche Beratung &amp; Ganzheitliche Medizin, per Video oder vor Ort</h1>
+      <h1>Cannabinoidtherapie &amp; Integrative Naturheilkunde in Hürth – per Video oder vor Ort</h1>
       <p class="hero-team">Mit Cihan Metin Yildirimtürk und Suzel Hammer</p>
       <p class="lead">Unkompliziert Termin buchen<sup>**</sup> und flexibel entscheiden: bequem von zu Hause per Videosprechstunde<sup>*</sup> oder persönlich in unserer Praxis in Hürth.</p>
       <div class="hero-ctas" id="termin">
@@ -122,11 +227,11 @@
   <div class="container about-inner">
     <h2 id="team">Zwei ärztliche Perspektiven, ein ganzheitlicher Anspruch</h2>
     <p class="lead-in">Kurze Termine im Minutentakt, kaum Zeit für Fragen, das Gefühl, nur eine Nummer zu sein: Das kennen viele aus der Regelversorgung. Bei LuxDocs nehmen sich zwei Ärzte bewusst Zeit für dich.</p>
-    <p>Bei LuxDocs bringen zwei Ärzte ihre jeweilige Erfahrung zusammen. Beide verstehen ihre Beratung als persönliche, gesprächsorientierte Ergänzung zur bestehenden haus- und fachärztlichen Versorgung, fundiert, interdisziplinär und ohne Denkverbote. Im Mittelpunkt steht ein ganzheitlicher Blick auf Körper, Psyche und Lebensumstände, der pflanzliche und komplementäre Ansätze dort einbezieht, wo sie sinnvoll erscheinen.</p>
+    <p>Bei LuxDocs bringen zwei Ärzte ihre jeweilige Erfahrung zusammen. Beide verstehen ihre Beratung als persönliche, gesprächsorientierte Ergänzung zur bestehenden haus- und fachärztlichen Versorgung, fundiert, interdisziplinär und ohne Denkverbote. Im Mittelpunkt steht ein ganzheitlicher Blick auf Körper, Psyche und Lebensumstände, der pflanzliche und komplementäre Ansätze dort einbezieht, wo sie sinnvoll erscheinen. Unsere Schwerpunkte umfassen Cannabinoidtherapie, integrative Naturheilkunde und individuelle Präventionsmedizin – für Selbstzahler und Privatversicherte in Hürth und der Region Köln.</p>
   </div>
   <div class="container team-grid">
     <div class="team-card">
-      <img class="team-avatar team-avatar-photo" src="cihan-portrait.jpg" alt="Cihan Metin Yildirimtürk">
+      <img class="team-avatar team-avatar-photo" src="cihan-portrait.jpg" alt="Cihan Metin Yildirimtürk – Facharzt Orthopädie, Cannabinoidtherapie, LuxDocs Hürth">
       <div class="tag">Cihan Metin Yildirimtürk</div>
       <h3>Facharzt für Orthopädie, Unfallchirurgie und Notfallmedizin</h3>
       <p class="intro">Schaut bewusst über den fachlichen Tellerrand hinaus: ausführliche Anamnese, individuelle Betrachtung und gemeinsam erarbeitete Präventionsstrategien.</p>
@@ -139,7 +244,7 @@
       <a class="btn btn-primary btn-small" href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Termin bei Cihan buchen</a>
     </div>
     <div class="team-card team-card-b">
-      <img class="team-avatar team-avatar-photo" src="suzel-portrait.jpg" alt="Suzel Hammer">
+      <img class="team-avatar team-avatar-photo" src="suzel-portrait.jpg" alt="Suzel Hammer – Ärztin ganzheitliche Medizin, Cannabinoidtherapie, LuxDocs Hürth">
       <div class="tag tag-b">Suzel Hammer</div>
       <h3>Ärztin für holistische Medizin</h3>
       <p class="intro">Verbindet einen ganzheitlichen Behandlungs- und Coaching-Ansatz mit klinischer Erfahrung, als Ergänzung zur bestehenden ärztlichen Betreuung.</p>
