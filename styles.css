@@ -87,7 +87,7 @@ header{
   box-shadow:0 6px 16px rgba(184,87,53,0.32);
 }
 .btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px);}
-.btn-secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.55);}
+.btn-secondary{background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.9);}
 .btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:#fff;transform:translateY(-1px);}
 .btn-small{padding:10px 20px;font-size:14px;}
 header .btn{padding:10px 22px;font-size:14px;}
