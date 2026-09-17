@@ -281,57 +281,41 @@
     </div>
   </div>
 </section>
-<section class="twitch-section" id="live">
+<section class="streams-section" id="streams">
   <div class="container">
-    <div class="twitch-head">
-      <div class="twitch-head-text">
-        <span class="event-tag">Live &amp; Aufzeichnungen</span>
-        <h2 class="twitch-title">Veranstaltungen live miterleben</h2>
-        <p class="twitch-sub">Schau dir unsere Patientenveranstaltungen live an oder sieh dir vergangene Aufzeichnungen direkt hier an.</p>
+    <div class="streams-header">
+      <div>
+        <span class="event-tag">Live &amp; Videos</span>
+        <h2 class="streams-title">Unsere Veranstaltungen online</h2>
+        <p class="streams-sub">Live auf Twitch oder als Aufzeichnung auf YouTube, direkt hier anschauen.</p>
       </div>
-      <a class="btn btn-twitch" href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
-        Kanal folgen
-      </a>
     </div>
-    <div class="twitch-player-wrap">
-      <iframe
-        src="https://player.twitch.tv/?channel=luxdocs&amp;parent=luxdocs.de&amp;autoplay=false"
-        allowfullscreen
-        scrolling="no"
-        width="100%"
-        height="100%"
-        title="LuxDocs Twitch-Livestream">
-      </iframe>
-    </div>
-    <p class="twitch-vod-hint">Vergangene Streams findest du auf <a href="https://www.twitch.tv/luxdocs/videos" target="_blank" rel="noopener">twitch.tv/luxdocs/videos</a></p>
-  </div>
-</section>
-
-<section class="yt-section" id="youtube">
-  <div class="container">
-    <div class="yt-head">
-      <div class="yt-head-text">
-        <span class="event-tag">YouTube</span>
-        <h2 class="yt-title">Videos &amp; Aufklärung</h2>
-        <p class="yt-sub">Medizinische Inhalte, Patientenfragen und Einblicke in unsere Arbeit, direkt auf unserem YouTube-Kanal.</p>
+    <div class="streams-grid">
+      <div class="stream-block">
+        <div class="stream-block-head">
+          <span class="stream-label stream-label-twitch">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+            Twitch
+          </span>
+          <a class="stream-follow" href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">Folgen &rarr;</a>
+        </div>
+        <div class="stream-player-wrap">
+          <iframe src="https://player.twitch.tv/?channel=luxdocs&amp;parent=luxdocs.de&amp;autoplay=false" allowfullscreen scrolling="no" title="LuxDocs Twitch-Livestream"></iframe>
+        </div>
       </div>
-      <a class="btn btn-yt" href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        Kanal abonnieren
-      </a>
+      <div class="stream-block">
+        <div class="stream-block-head">
+          <span class="stream-label stream-label-yt">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+          </span>
+          <a class="stream-follow" href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">Abonnieren &rarr;</a>
+        </div>
+        <div class="stream-player-wrap">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UU5i7Ec9-xaicdMkj1GzpY1g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="LuxDocs YouTube"></iframe>
+        </div>
+      </div>
     </div>
-    <div class="yt-player-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=UU5i7Ec9-xaicdMkj1GzpY1g"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        width="100%"
-        height="100%"
-        title="LuxDocs YouTube-Kanal">
-      </iframe>
-    </div>
-    <p class="yt-vod-hint">Alle Videos findest du auf <a href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">youtube.com/@LuxDocs-z8n</a></p>
   </div>
 </section>
 
