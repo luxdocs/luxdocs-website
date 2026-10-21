@@ -1,22 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LuxDocs Hürth | Cannabinoidtherapie &amp; Integrative Naturheilkunde – Cihan Metin Yildirimtürk &amp; Suzel Hammer</title>
 <meta name="description" content="Cannabinoidtherapie &amp; integrative Naturheilkunde in Hürth bei Köln. Cihan Metin Yildirimtürk (Facharzt Orthopädie) &amp; Suzel Hammer – medizinisches Cannabis, Prävention, ganzheitliche Medizin per Video oder vor Ort.">
 <meta name="keywords" content="Cannabinoidtherapie Hürth, medizinisches Cannabis Hürth, Cannabis Rezept Hürth, Cannabis Sprechstunde, integrative Naturheilkunde Hürth, ganzheitliche Medizin Hürth, Prävention Hürth, Cihan Metin Yildirimtürk, Suzel Hammer, LuxDocs, Cannabis Arzt Köln, Cannabis Rezept online, Endocannabinoid-System, Naturheilkunde Köln">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://luxdocs.de/">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2315311a'/%3E%3Ctext x='50' y='68' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='56' font-weight='700' fill='%23f7f5ee' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://luxdocs.de/">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="LuxDocs Hürth | Cannabinoidtherapie &amp; Naturheilkunde">
 <meta property="og:description" content="Cannabinoidtherapie &amp; integrative Naturheilkunde in Hürth. Cihan Metin Yildirimtürk &amp; Suzel Hammer – per Video oder vor Ort. Termin über Jameda buchen.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://luxdocs.de/assets/img/wald.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LuxDocs Hürth | Cannabinoidtherapie &amp; Naturheilkunde">
 <meta name="twitter:description" content="Cannabinoidtherapie &amp; Naturheilkunde in Hürth bei Köln. Cihan Metin Yildirimtürk &amp; Suzel Hammer.">
 <script type="application/ld+json">
@@ -93,7 +91,7 @@
         "Notfallmedizin",
         "Integrative Naturheilkunde"
       ],
-      "image": "https://luxdocs.de/images/cihan-portrait.jpg",
+      "image": "https://luxdocs.de/assets/img/cihan.jpg",
       "sameAs": "https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth",
       "knowsLanguage": [
         "Deutsch",
@@ -115,7 +113,7 @@
         "Psychosomatik",
         "Cannabinoidtherapie"
       ],
-      "image": "https://luxdocs.de/images/suzel-portrait.jpg",
+      "image": "https://luxdocs.de/assets/img/suzel.jpg",
       "sameAs": "https://www.jameda.de/suzel-hammer/arzt/huerth",
       "knowsLanguage": [
         "Deutsch",
@@ -127,639 +125,310 @@
   ]
 }
 </script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta name="theme-color" content="#f4f4f5">
+<link rel="preload" href="assets/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
-<div id="newsletter-bar" style="background:#1a3a2a;color:#e8f5e9;text-align:center;padding:10px 20px;font-size:13px;width:100%;box-sizing:border-box;letter-spacing:0.3px;">Newsletter: Aktuelle Infos zu Cannabis-Medizin &amp; ganzheitlicher Gesundheit  <a href="https://luxdocs.beehiiv.com/subscribe" target="_blank" style="color:#7bc8a4;font-weight:bold;text-decoration:underline;">Jetzt anmelden →</a></div>
-
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">Lux<span>Docs</span></a>
-    <nav class="nav-links">
-      <a href="#team">Team</a>
-      <a href="#ablauf">Ablauf</a>
-      <a href="#angebot">Angebot</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="agb.html">AGB</a>
-    </nav>
-    <button type="button" class="btn btn-primary" data-open-modal>Termin buchen</button>
+<header class="nav" id="nav">
+  <button class="nav-left glass" type="button" aria-expanded="false" aria-controls="menu"><span class="burger"><i></i></span><span class="lbl">Menü</span></button>
+  <a class="wordmark" href="./">LuxDocs<small>Ganzheitliche Medizin</small></a>
+  <div class="nav-right glass">
+    <a class="tel" href="tel:+4922335455081">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      02233 5455081
+    </a>
+    <a class="pill light" href="#team" data-open="booking">Termin buchen</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-inner">
-    <div>
-      <div class="hero-visual">
-        <div class="brand-card">
-          <div class="brand-card-word">Lux<span>Docs</span></div>
-          <div class="brand-card-tag">Ganzheitliche Medizin</div>
-        </div>
-      </div>
-      <div class="eyebrow-row">
-        <span class="eyebrow">Cannabinoidtherapie &amp; Naturheilkunde in Hürth bei Köln</span>
-        <span class="eyebrow eyebrow-b">Für Privatversicherte &amp; Selbstzahler</span>
-      </div>
-      <h1>Cannabinoidtherapie &amp; Integrative Naturheilkunde in Hürth , per Video oder vor Ort</h1>
-      <p class="hero-team">Mit Cihan Metin Yildirimtürk und Suzel Hammer</p>
-      <p class="lead">Unkompliziert Termin buchen<sup>**</sup> und flexibel entscheiden: bequem von zu Hause per Videosprechstunde<sup>*</sup> oder persönlich in unserer Praxis in Hürth.</p>
-      <div class="hero-ctas" id="termin">
-        <button type="button" class="btn btn-primary" data-open-modal>Termin online buchen</button>
-      </div>
-      <div class="icon-links">
-        <a class="icon-link" href="#" onclick="openWAModal(); return false;" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          Per WhatsApp anfragen
-        </a>
-        <a class="icon-link" href="tel:+4922335455081">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Anrufen: 02233 5455081
-        </a>
-      </div>
-      <p class="hero-note">Rezepte nur nach ärztlicher Einschätzung der medizinischen Eignung.<sup>***</sup></p>
-    </div>
-  </div>
-</section>
+<main>
 
-<section class="trust-banner">
-  <div class="container trust-banner-inner">
-    <span class="trust-banner-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Ärztekammer Nordrhein
-    </span>
-    <span class="trust-banner-divider">|</span>
-    <span class="trust-banner-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Vor Ort in Hürth &amp; per Video
-    </span>
-    <span class="trust-banner-divider">|</span>
-    <span class="trust-banner-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Keine Registrierung nötig
-    </span>
-  </div>
-</section>
-
-<section class="event-banner">
-  <div class="container">
-    <div class="event-card">
-      <div class="event-card-top">
-        <span class="event-tag">Monatliche Patientenveranstaltung</span>
-        <p class="event-intro">Einmal im Monat laden wir zur offenen Patientenveranstaltung ein — Fragen, Informationen und ehrlicher Austausch rund um Cannabis-Medizin.</p>
-      </div>
-      <div class="event-highlight">
-        <div class="event-date-block">
-          <div class="event-date-num">14</div>
-          <div class="event-date-meta">
-            <span>Oktober 2026</span>
-            <span>18:00 Uhr</span>
-          </div>
-        </div>
-        <div class="event-location-block">
-          <strong>Nächster Termin · Hybrid</strong>
-          <span>Thema: Endocannabinoid-System</span>
-          <span>In den Räumlichkeiten der Apotheke Lux99</span>
-          <span>An der Hasenkaule 10, 50354 Hürth</span>
-        </div>
-      </div>
-      <div class="event-cta-row">
-           <a class="btn btn-primary event-cta" href="https://www.cannabis-konkret.de" target="_blank" rel="noopener">Infos &amp; Livestream auf cannabis-konkret.de →</a>
-           <a class="btn btn-secondary event-cta" href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">▶ Livestream auf Twitch</a>
-         </div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="ueber">
-  <div class="container about-inner">
-    <h2 id="team">Zwei ärztliche Perspektiven, ein ganzheitlicher Anspruch</h2>
-    <p class="lead-in">Kurze Termine im Minutentakt, kaum Zeit für Fragen, das Gefühl, nur eine Nummer zu sein: Das kennen viele aus der Regelversorgung. Bei LuxDocs nehmen sich zwei Ärzte bewusst Zeit für dich.</p>
-    <p>Bei LuxDocs bringen zwei Ärzte ihre jeweilige Erfahrung zusammen. Beide verstehen ihre Beratung als persönliche, gesprächsorientierte Ergänzung zur bestehenden haus- und fachärztlichen Versorgung, fundiert, interdisziplinär und ohne Denkverbote. Im Mittelpunkt steht ein ganzheitlicher Blick auf Körper, Psyche und Lebensumstände, der pflanzliche und komplementäre Ansätze dort einbezieht, wo sie sinnvoll erscheinen. Unsere Schwerpunkte umfassen Cannabinoidtherapie, integrative Naturheilkunde und individuelle Präventionsmedizin , für Selbstzahler und Privatversicherte in Hürth und der Region Köln.</p>
-  </div>
-  <div class="container team-grid">
-    <div class="team-card">
-      <img class="team-avatar team-avatar-photo" src="cihan-portrait.jpg" alt="Cihan Metin Yildirimtürk , Facharzt Orthopädie, Cannabinoidtherapie, LuxDocs Hürth">
-      <div class="tag">Cihan Metin Yildirimtürk</div>
-      <h3>Facharzt für Orthopädie, Unfallchirurgie und Notfallmedizin</h3>
-      <p class="intro">Schaut bewusst über den fachlichen Tellerrand hinaus: ausführliche Anamnese, individuelle Betrachtung und gemeinsam erarbeitete Präventionsstrategien.</p>
-      <ul class="team-facts">
-        <li><b>Fachbereich:</b> Integrative Naturheilkunde</li>
-        <li><b>Ansatz:</b> Gesprächsorientiert, ganzheitlich, ohne apparative Verfahren</li>
-        <li><b>Sprachen:</b> Deutsch, Türkisch, Englisch</li>
-      </ul>
-      
-      <a class="btn btn-primary btn-small" href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Termin bei Cihan buchen</a>
-    </div>
-    <div class="team-card team-card-b">
-      <img class="team-avatar team-avatar-photo" src="suzel-portrait.jpg" alt="Suzel Hammer , Ärztin ganzheitliche Medizin, Cannabinoidtherapie, LuxDocs Hürth">
-      <div class="tag tag-b">Suzel Hammer</div>
-      <h3>Ärztin für holistische Medizin</h3>
-      <p class="intro">Verbindet einen ganzheitlichen Behandlungs- und Coaching-Ansatz mit klinischer Erfahrung, als Ergänzung zur bestehenden ärztlichen Betreuung.</p>
-      <ul class="team-facts">
-        <li><b>Fachbereich:</b> Praktische Ärztin &amp; Psychosomatik</li>
-        <li><b>Schwerpunkt:</b> Endocannabinoid-System &amp; Coaching-Angebot</li>
-        <li><b>Sprachen:</b> Deutsch, Englisch, Spanisch, Portugiesisch</li>
-      </ul>
-      <a class="btn btn-primary btn-small" href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Termin bei Suzel buchen</a>
-    </div>
-  </div>
-</section>
-
-<section class="modes" id="angebot">
-  <div class="container">
-    <h2>Zwei Wege, ein Termin</h2>
-    <p class="section-sub">Du entscheidest, wie deine Beratung stattfindet, bei Cihan und Suzel ist beides über Jameda buchbar.</p>
-    <div class="modes-grid">
-      <div class="mode-card">
-        <div class="tag">Videosprechstunde</div>
-        <h3>Bequem von zu Hause</h3>
-        <p>Ärztliche Beratung per Video, ganz ohne Anfahrt. Ideal, wenn du zeitlich flexibel bleiben möchtest.</p>
-      </div>
-      <div class="mode-card">
-        <div class="tag">Vor Ort in Hürth</div>
-        <h3>Persönlich in der Praxis</h3>
-        <p>Beratung face-to-face in unserer Praxis: An d. Hasenkaule 10, 50354 Hürth.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="streams-section" id="streams">
-  <div class="container">
-    <div class="streams-header">
+  <section class="hero">
+    <img class="photo" src="assets/img/wald.jpg" alt="">
+    <div class="hero-inner">
+      <h1 class="hl hl-xl"><em>Medizin, die sich</em><span>Zeit nimmt</span></h1>
       <div>
-        <span class="event-tag">Live &amp; Videos</span>
-        <h2 class="streams-title">Unsere Veranstaltungen online</h2>
-        <p class="streams-sub">Live auf Twitch oder als Aufzeichnung auf YouTube, direkt hier anschauen.</p>
+        <p>Cannabinoidtherapie und integrative Naturheilkunde in Hürth bei Köln. Persönlich in unserer Praxis oder per Video von zu Hause.</p>
+        <a class="down" href="#ansatz" aria-label="Weiter"><svg viewBox="0 0 12 12" fill="none" stroke-width="1.4"><path d="M2 4.5l4 4 4-4"/></svg></a>
       </div>
     </div>
-    <div class="streams-grid">
-      <div class="stream-block">
-        <div class="stream-block-head">
-          <span class="stream-label stream-label-twitch">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
-            Twitch
-          </span>
-          <a class="stream-follow" href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">Folgen &rarr;</a>
-        </div>
-        <div class="stream-player-wrap">
-          <iframe src="https://player.twitch.tv/?channel=luxdocs&amp;parent=luxdocs.de&amp;autoplay=false" allowfullscreen scrolling="no" title="LuxDocs Twitch-Livestream"></iframe>
-        </div>
-      </div>
-      <div class="stream-block">
-        <div class="stream-block-head">
-          <span class="stream-label stream-label-yt">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            YouTube
-          </span>
-          <a class="stream-follow" href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">Abonnieren &rarr;</a>
-        </div>
-        <div class="stream-player-wrap">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=UU5i7Ec9-xaicdMkj1GzpY1g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="LuxDocs YouTube"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="steps" id="ablauf">
-  <div class="container">
-    <h2>So läuft's ab</h2>
-    <p class="section-sub">In drei Schritten zu deinem Termin.</p>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Termin buchen</h3>
-        <p>Wähle Cihan oder Suzel und buche über Jameda, Video oder vor Ort.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Beratungsgespräch</h3>
-        <p>Wir besprechen deine Beschwerden und mögliche Behandlungsoptionen.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Behandlung &amp; Folgetermine</h3>
-        <p>Nach der ärztlichen Einschätzung beginnt deine individuell abgestimmte Behandlung, begleitet von Folgeterminen, so wie du sie brauchst.</p>
+  <section class="split" id="ansatz">
+    <div class="panel">
+      <h2 class="hl hl-l rv"><em>Unser</em><span>Ansatz</span></h2>
+      <div class="rv">
+        <p class="lead">Kurze Termine im Minutentakt, kaum Zeit für Fragen, das Gefühl, nur eine Nummer zu sein: Das kennen viele aus der Regelversorgung. Bei LuxDocs nehmen sich zwei Ärzte bewusst Zeit für dich.</p>
+        <p class="body-s">Bei LuxDocs bringen zwei Ärzte ihre jeweilige Erfahrung zusammen. Beide verstehen ihre Beratung als persönliche, gesprächsorientierte Ergänzung zur bestehenden haus- und fachärztlichen Versorgung, fundiert, interdisziplinär und ohne Denkverbote. Im Mittelpunkt steht ein ganzheitlicher Blick auf Körper, Psyche und Lebensumstände, der pflanzliche und komplementäre Ansätze dort einbezieht, wo sie sinnvoll erscheinen. Unsere Schwerpunkte umfassen Cannabinoidtherapie, integrative Naturheilkunde und individuelle Präventionsmedizin, für Selbstzahler und Privatversicherte in Hürth und der Region Köln.</p>
+        <a class="pill" href="#team">Unsere Ärzte</a>
       </div>
     </div>
-  </div>
-</section>
+    <div class="media"><img class="photo" src="assets/img/wald-von-oben.jpg" alt=""></div>
+  </section>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>Bereit für deinen Termin?</h2>
-    <p class="section-sub">Ein Klick, dann wählst du Cihan oder Suzel.</p>
-    <div class="hero-ctas">
-      <button type="button" class="btn btn-primary" data-open-modal>Termin online buchen</button>
+  <section id="team">
+    <div class="head-row">
+      <div><h2 class="hl hl-l rv"><em>Zwei Perspektiven</em><span>Ein Anspruch</span></h2></div>
+      <div><p class="body-s rv">Körper regulieren. Psyche verstehen. Das Endocannabinoidsystem im Blick. Integrative Naturmedizin, ärztlich fundiert.</p></div>
     </div>
-    <div class="icon-links">
-      <a class="icon-link" href="#" onclick="openWAModal(); return false;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        Per WhatsApp anfragen
-      </a>
-      <a class="icon-link" href="tel:+4922335455081">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Anrufen: 02233 5455081
-      </a>
+    <div class="doctors">
+      <article class="doctor rv">
+        <img class="portrait" src="assets/img/cihan.jpg" width="200" height="200" alt="Porträt von Cihan Metin Yildirimtürk">
+        <div>
+          <p class="kicker">Integrative Naturheilkunde</p>
+          <h3>Cihan Metin Yildirimtürk</h3>
+          <p class="role">Facharzt für Orthopädie, Unfallchirurgie und Notfallmedizin</p>
+          <p class="desc">Schaut bewusst über den fachlichen Tellerrand hinaus: ausführliche Anamnese, individuelle Betrachtung und gemeinsam erarbeitete Präventionsstrategien.</p>
+          <dl>
+            <div><dt>Ansatz</dt><dd>Gesprächsorientiert, ganzheitlich, ohne apparative Verfahren</dd></div>
+            <div><dt>Sprachen</dt><dd>Deutsch, Türkisch, Englisch</dd></div>
+          </dl>
+          <a class="pill" href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Termin bei Cihan buchen</a>
+        </div>
+      </article>
+      <article class="doctor rv">
+        <img class="portrait" src="assets/img/suzel.jpg" width="200" height="200" alt="Porträt von Suzel Hammer">
+        <div>
+          <p class="kicker">Praktische Ärztin &amp; Psychosomatik</p>
+          <h3>Suzel Hammer</h3>
+          <p class="role">Ärztin für holistische Medizin</p>
+          <p class="desc">Verbindet einen ganzheitlichen Behandlungs- und Coaching-Ansatz mit klinischer Erfahrung, als Ergänzung zur bestehenden ärztlichen Betreuung.</p>
+          <dl>
+            <div><dt>Schwerpunkt</dt><dd>Endocannabinoid-System &amp; Coaching-Angebot</dd></div>
+            <div><dt>Sprachen</dt><dd>Deutsch, Englisch, Spanisch, Portugiesisch</dd></div>
+          </dl>
+          <a class="pill" href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Termin bei Suzel buchen</a>
+        </div>
+      </article>
     </div>
-    <p class="map-hint" style="margin-top:24px">Ihr findet uns direkt an der Ecke der Apotheke Lux99 — gut sichtbar und leicht zu finden.</p>
-    <div class="map-wrapper">
-      <iframe
-        src="https://maps.google.com/maps?q=50.880444,6.907343&t=&z=18&ie=UTF8&iwloc=&output=embed"
-        width="100%"
-        height="300"
-        style="border:0;border-radius:14px;display:block;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="LuxDocs Standort">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact" id="kontakt">
-  <div class="container">
-    <div class="contact-grid">
+  <section id="termin">
+    <div class="head-row">
+      <div><h2 class="hl hl-l rv"><em>Zwei Wege</em><span>Ein Termin</span></h2></div>
+      <div>
+        <p class="body-s rv">Du entscheidest, wie deine Beratung stattfindet. Bei Cihan und Suzel ist beides über Jameda buchbar, ohne Registrierung.<sup>2</sup></p>
+      </div>
+    </div>
+    <div class="ways">
+      <div class="way">
+        <img class="photo" src="assets/img/zuhause.jpg" alt="">
+        <div class="txt">
+          <p class="kicker">Videosprechstunde</p>
+          <h3 class="hl hl-m"><em>Bequem</em><span>von zu Hause</span></h3>
+          <p>Ärztliche Beratung per Video, ganz ohne Anfahrt. Ideal, wenn du zeitlich flexibel bleiben möchtest.<sup>1</sup></p>
+        </div>
+      </div>
+      <div class="way">
+        <img class="photo" src="assets/img/praxis.jpg" alt="">
+        <div class="txt">
+          <p class="kicker">Vor Ort in Hürth</p>
+          <h3 class="hl hl-m"><em>Persönlich</em><span>in der Praxis</span></h3>
+          <p>Beratung face-to-face in unserer Praxis: An der Hasenkaule 10, 50354 Hürth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-wrap" id="ablauf">
+    <h2 class="hl hl-l rv"><em>In drei Schritten</em><span>Zu deinem Termin</span></h2>
+    <ol class="steps">
+      <li class="rv"><div class="num">I</div><h3>Termin buchen</h3><p class="body-s">Wähle Cihan oder Suzel und buche über Jameda, per Video oder vor Ort.</p></li>
+      <li class="rv"><div class="num">II</div><h3>Beratungsgespräch</h3><p class="body-s">Wir besprechen deine Beschwerden und mögliche Behandlungsoptionen.</p></li>
+      <li class="rv"><div class="num">III</div><h3>Behandlung</h3><p class="body-s">Nach der ärztlichen Einschätzung beginnt deine individuell abgestimmte Behandlung, begleitet von Folgeterminen, so wie du sie brauchst.<sup>3</sup></p></li>
+    </ol>
+  </section>
+
+  <section class="split rev" id="veranstaltung">
+    <div class="panel center">
+      <div class="rv">
+        <p class="kicker event-kicker">Monatliche Patientenveranstaltung</p>
+        <div class="date-big">13</div>
+        <p class="date-sub">November 2026 · 18:00 Uhr · Hybrid</p>
+      </div>
+      <div class="rv">
+        <h2 class="hl hl-m"><em>Thema des Abends</em><span>Schmerz und Cannabis</span></h2>
+        <p class="event-meta">Fragen, Informationen und ehrlicher Austausch rund um Cannabis-Medizin.<br>In den Räumlichkeiten der Apotheke Lux99, An der Hasenkaule 10, 50354 Hürth, und im Livestream.</p>
+        <div class="links">
+          <a class="pill" href="https://www.cannabis-konkret.de/" target="_blank" rel="noopener">Infos &amp; Livestream</a>
+          <a class="pill ghost" href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">Twitch</a>
+          <a class="pill ghost" href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="media"><img class="photo" src="assets/img/blaetter.jpg" alt=""></div>
+  </section>
+
+  <section id="anfahrt">
+    <div class="head-row">
+      <div><h2 class="hl hl-l rv"><em>So findest</em><span>Du uns</span></h2></div>
+      <div>
+        <div class="visit-grid rv">
+          <div><h3>Adresse</h3><p>LuxDocs<br>An der Hasenkaule 10<br>50354 Hürth</p></div>
+          <div><h3>Orientierung</h3><p>Direkt an der Ecke der Apotheke Lux99, gut sichtbar und leicht zu finden.</p></div>
+          <div><h3>Telefon</h3><p><a href="tel:+4922335455081">02233 5455081</a></p></div>
+        </div>
+        <a class="pill rv" href="https://www.google.com/maps/search/?api=1&amp;query=An+der+Hasenkaule+10,+50354+H%C3%BCrth" target="_blank" rel="noopener">Route planen</a>
+      </div>
+    </div>
+    <div class="map" data-map-src="https://maps.google.com/maps?q=50.880444,6.907343&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
+      <div class="map-consent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <p class="kicker">LuxDocs · An der Hasenkaule 10 · Hürth</p>
+        <p class="body-s">Die Karte wird von Google Maps geladen. Erst mit dem Klick werden dabei Daten an Google übertragen. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <button class="pill" type="button" data-map-load>Karte anzeigen</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="split compact" id="newsletter">
+    <div class="panel">
+      <h2 class="hl hl-l rv"><em>Bleib</em><span>Informiert</span></h2>
+      <div class="rv">
+        <p class="body-s">Aktuelle Infos zu Cannabis-Medizin, Naturheilkunde, ganzheitlicher Gesundheit und Patientenveranstaltungen, direkt in dein Postfach. Auch die Patientenfragen aus unseren monatlichen Veranstaltungen verschicken wir über den Newsletter.</p>
+        <a class="pill" href="https://luxdocs.beehiiv.com/subscribe" target="_blank" rel="noopener">Für den Newsletter anmelden</a>
+      </div>
+    </div>
+    <div class="media"><img class="photo" src="assets/img/pflanze.jpg" alt=""></div>
+  </section>
+
+  <section class="closing" id="kontakt">
+    <h2 class="hl hl-l rv"><em>Bereit für</em><span>Deinen Termin?</span></h2>
+    <p class="body-s rv">Ein Klick, dann wählst du Cihan oder Suzel.</p>
+    <div class="row rv">
+      <button class="pill" type="button" data-open="booking">Termin online buchen</button>
+      <button class="pill ghost" type="button" data-open="whatsapp">Per WhatsApp anfragen</button>
+    </div>
+    <p class="phone rv">Oder ruf uns an: <a href="tel:+4922335455081">02233 5455081</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="card">
+    <div class="cols">
       <div>
         <h3>Praxis</h3>
-        <p>Lux<span class="brand-green">Docs</span></p>
-        <p class="muted">An d. Hasenkaule 10<br>50354 Hürth</p>
+        <span>LuxDocs</span>
+        <span>An der Hasenkaule 10</span>
+        <span>50354 Hürth</span>
+      </div>
+      <div>
+        <h3>Termin über Jameda</h3>
+        <a href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Cihan Metin Yildirimtürk</a>
+        <a href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Suzel Hammer</a>
       </div>
       <div>
         <h3>Kontakt</h3>
-        <p><a href="tel:+4922335455081">Telefon: 02233 5455081</a></p>
-        <p><a href="https://wa.me/4915225370653" target="_blank" rel="noopener">WhatsApp Cihan: +49 152 2537 0653</a></p>
-        <p><a href="https://wa.me/491791492233" target="_blank" rel="noopener">WhatsApp Suzel: +49 179 149 2233</a></p>
-        <p><a href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">Cihan Metin Yildirimtürk, Termin über Jameda</a></p>
-        <p><a href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">Suzel Hammer, Termin über Jameda</a></p>
+        <a href="tel:+4922335455081">02233 5455081</a>
+        <a href="https://wa.me/4915225370653" target="_blank" rel="noopener">WhatsApp Cihan</a>
+        <a href="https://wa.me/491791492233" target="_blank" rel="noopener">WhatsApp Suzel</a>
+      </div>
+      <div>
+        <h3>Folgen</h3>
+        <a href="https://luxdocs.beehiiv.com/subscribe" target="_blank" rel="noopener">Newsletter</a>
+        <a href="https://www.twitch.tv/luxdocs" target="_blank" rel="noopener">Twitch</a>
+        <a href="https://www.youtube.com/@LuxDocs-z8n" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="footnotes-section">
-  <div class="container">
-    <div class="footnotes">
-      <p><sup>*</sup> Nicht jede Behandlung eignet sich für eine Videosprechstunde. Voraussetzung ist, dass die anerkannten fachlichen Standards nach § 630a BGB eingehalten werden, also der aktuelle Stand medizinischer Erkenntnisse und ärztlicher Erfahrung, und der Arzt zu dem Schluss kommt, dass ein persönlicher Termin vor Ort für das jeweilige Beschwerdebild nicht zwingend notwendig ist. Ein Rezept wird ausschließlich bei entsprechender medizinischer Eignung ausgestellt. Das Angebot einer Beratung per Video bezieht sich damit nicht pauschal auf jede Behandlung, sondern jeweils auf einzelne Krankheitsbilder, bei denen laut anerkannten fachlichen Standards kein persönlicher Kontakt erforderlich ist.</p>
-      <p><sup>**</sup> Für die Terminbuchung über Jameda ist weder eine Registrierung noch ein eigenes Benutzerkonto notwendig. Erfasst werden lediglich Name, E-Mail-Adresse für die Terminbestätigung sowie optional eine Telefonnummer für Rückfragen. Gesundheitsbezogene Angaben, etwa zu Vorerkrankungen oder zur Krankengeschichte, sind kein Bestandteil der Buchung, sondern werden erst im persönlichen Beratungsgespräch besprochen. So bleibt die bei der Buchung erhobene Datenmenge auf das Nötigste beschränkt.</p>
-      <p><sup>***</sup> Ein Rezept für medizinisches Cannabis wird nur dann ausgestellt, wenn die ärztliche Einschätzung eine passende Indikation ergibt und die Eignung für eine Cannabistherapie besteht. Ein Beratungsgespräch führt also nicht automatisch zu einem Rezept, die Verordnung erfolgt erst nach sorgfältiger medizinischer Prüfung im Einzelfall.</p>
-      <p class="footnotes-link">Ausführliche Regelungen findest du in unseren <a href="agb.html">AGB</a>.</p>
+    <div class="notes">
+      <p>1. Nicht jede Behandlung eignet sich für eine Videosprechstunde. Voraussetzung ist, dass die anerkannten fachlichen Standards nach § 630a BGB eingehalten werden, also der aktuelle Stand medizinischer Erkenntnisse und ärztlicher Erfahrung, und der Arzt zu dem Schluss kommt, dass ein persönlicher Termin vor Ort für das jeweilige Beschwerdebild nicht zwingend notwendig ist. Ein Rezept wird ausschließlich bei entsprechender medizinischer Eignung ausgestellt. Das Angebot einer Beratung per Video bezieht sich damit nicht pauschal auf jede Behandlung, sondern jeweils auf einzelne Krankheitsbilder, bei denen laut anerkannten fachlichen Standards kein persönlicher Kontakt erforderlich ist.</p>
+      <p>2. Für die Terminbuchung über Jameda ist weder eine Registrierung noch ein eigenes Benutzerkonto notwendig. Erfasst werden lediglich Name, E-Mail-Adresse für die Terminbestätigung sowie optional eine Telefonnummer für Rückfragen. Gesundheitsbezogene Angaben, etwa zu Vorerkrankungen oder zur Krankengeschichte, sind kein Bestandteil der Buchung, sondern werden erst im persönlichen Beratungsgespräch besprochen. So bleibt die bei der Buchung erhobene Datenmenge auf das Nötigste beschränkt.</p>
+      <p>3. Ein Rezept für medizinisches Cannabis wird nur dann ausgestellt, wenn die ärztliche Einschätzung eine passende Indikation ergibt und die Eignung für eine Cannabistherapie besteht. Ein Beratungsgespräch führt also nicht automatisch zu einem Rezept, die Verordnung erfolgt erst nach sorgfältiger medizinischer Prüfung im Einzelfall. Ausführliche Regelungen findest du in unseren <a href="agb.html">AGB</a>.</p>
+    </div>
+    <div class="legal-line">
+      <span>© 2026 LuxDocs · Ärztekammer Nordrhein</span>
+      <nav aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </nav>
     </div>
   </div>
-</section>
-
-
-<section class="newsletter" id="newsletter">
-<div class="container" style="text-align:center;padding-top:4rem;padding-bottom:4rem;">
-<h2 style="margin-bottom:0.75rem;">Bleib informiert</h2>
-<p class="section-sub" style="max-width:520px;margin:0 auto 2rem;">Aktuelle Infos zu Cannabis-Medizin, Naturheilkunde, ganzheitlicher Gesundheit und Patientenveranstaltungen , direkt in Ihr Postfach.</p>
-<a class="btn btn-primary" href="https://luxdocs.beehiiv.com/subscribe" target="_blank" rel="noopener">Für den Newsletter anmelden</a>
-</div>
-</section>
-
-<footer>
-  <div class="container footer-inner">
-    <div>© <span id="year"></span> Lux<span class="brand-green">Docs</span>, Alle Rechte vorbehalten</div>
-    <div class="footer-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="agb.html">AGB</a>
-    </div>
-  </div>
-  <div class="container footer-ai"><strong>Diese Website wurde mit Unterstützung von Künstlicher Intelligenz erstellt und redaktionell geprüft.</strong></div>
 </footer>
 
-<div class="modal-backdrop" id="bookingModal">
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button type="button" class="modal-close" id="modalClose" aria-label="Schließen">&times;</button>
-    <h3 id="modalTitle">Bei wem möchtest du buchen?</h3>
-    <p class="modal-sub">Die Buchung erfolgt extern über Jameda, in einem neuen Tab.</p>
-    <div class="modal-options">
-      <a class="modal-option" href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">
-        <span class="modal-option-name">Cihan Metin Yildirimtürk</span>
-        <span class="modal-option-tag">Integrative Naturheilkunde</span>
+<div class="menu" id="menu" inert>
+  <nav aria-label="Hauptmenü">
+    <ol>
+      <li><a href="#ansatz"><em>i</em>Ansatz</a></li>
+      <li><a href="#team"><em>ii</em>Ärzte</a></li>
+      <li><a href="#termin"><em>iii</em>Termin</a></li>
+      <li><a href="#ablauf"><em>iv</em>Ablauf</a></li>
+      <li><a href="#veranstaltung"><em>v</em>Veranstaltung</a></li>
+      <li><a href="#anfahrt"><em>vi</em>Anfahrt</a></li>
+      <li><a href="agb.html"><em>vii</em>AGB</a></li>
+    </ol>
+    <div class="contact">
+      <div><h3>Praxis</h3>An der Hasenkaule 10<br>50354 Hürth</div>
+      <div><h3>Kontakt</h3><a href="tel:+4922335455081">02233 5455081</a><a href="#kontakt" data-open="whatsapp">WhatsApp</a></div>
+      <div><h3>Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+  </nav>
+  <figure><img class="photo" src="assets/img/pflanze.jpg" alt=""></figure>
+</div>
+
+<div class="modal" id="booking" inert role="dialog" aria-modal="true" aria-labelledby="booking-title">
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Schließen">×</button>
+    <h2 class="hl hl-m" id="booking-title"><em>Bei wem möchtest du</em><span>Buchen?</span></h2>
+    <p class="body-s">Die Buchung erfolgt extern über Jameda, in einem neuen Tab.</p>
+    <div class="options">
+      <a class="option" href="https://www.jameda.de/cihan-metin-yildirimtuerk/arzt-orthopaede-unfallchirurg-notfallmediziner/huerth" target="_blank" rel="noopener">
+        <span><strong>Cihan Metin Yildirimtürk</strong><small>Integrative Naturheilkunde</small></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3L3 13"/></svg>
       </a>
-      <a class="modal-option" href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">
-        <span class="modal-option-name">Suzel Hammer</span>
-        <span class="modal-option-tag">Ganzheitliche Medizin</span>
+      <a class="option" href="https://www.jameda.de/suzel-hammer/arzt/huerth" target="_blank" rel="noopener">
+        <span><strong>Suzel Hammer</strong><small>Ganzheitliche Medizin</small></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3L3 13"/></svg>
       </a>
     </div>
   </div>
 </div>
-<div class="modal-backdrop" id="waChoiceModal">
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="waChoiceTitle">
-    <button class="modal-close" id="waChoiceClose" aria-label="Schließen">&times;</button>
-    <h3 id="waChoiceTitle">WhatsApp Anfrage</h3>
-    <p class="modal-sub">Bitte wählen Sie, wen Sie kontaktieren möchten.</p>
-    <div class="modal-options">
-      <a class="modal-option" href="https://wa.me/4915225370653" target="_blank" rel="noopener">
-        <span class="modal-option-name">Cihan Metin Yildirimtürk</span>
-        <span class="modal-option-tag">+49 152 2537 0653</span>
+
+<div class="modal" id="whatsapp" inert role="dialog" aria-modal="true" aria-labelledby="wa-title">
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Schließen">×</button>
+    <h2 class="hl hl-m" id="wa-title"><em>Anfrage per</em><span>WhatsApp</span></h2>
+    <p class="body-s">Bitte wähle, wen du kontaktieren möchtest.</p>
+    <div class="options">
+      <a class="option" href="https://wa.me/4915225370653" target="_blank" rel="noopener">
+        <span><strong>Cihan Metin Yildirimtürk</strong><small>+49 152 2537 0653</small></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3L3 13"/></svg>
       </a>
-      <a class="modal-option" href="https://wa.me/491791492233" target="_blank" rel="noopener">
-        <span class="modal-option-name">Suzel Hammer</span>
-        <span class="modal-option-tag">+49 179 149 2233</span>
+      <a class="option" href="https://wa.me/491791492233" target="_blank" rel="noopener">
+        <span><strong>Suzel Hammer</strong><small>+49 179 149 2233</small></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3L3 13"/></svg>
       </a>
     </div>
   </div>
 </div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  (function(){
-    var modal = document.getElementById('bookingModal');
-    var openers = document.querySelectorAll('[data-open-modal]');
-    var closer = document.getElementById('modalClose');
-
-    function openModal(e){
-      e.preventDefault();
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(){
-      modal.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-    openers.forEach(function(btn){
-      btn.addEventListener('click', openModal);
-    });
-    closer.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e){
-      if (e.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') closeModal();
-    });
-  })();
-
-  function openWAModal() {
-    document.getElementById('waChoiceModal').classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-  document.getElementById('waChoiceClose').addEventListener('click', function() {
-    document.getElementById('waChoiceModal').classList.remove('is-open');
-    document.body.style.overflow = '';
-  });
-  document.getElementById('waChoiceModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-  });</script>
-
-
-<style>
-#ld-chat-bubble{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#15311a;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.22);z-index:9999;transition:transform .2s}
-#ld-chat-bubble:hover{transform:scale(1.08)}
-#ld-chat-bubble svg{width:26px;height:26px;fill:#fff}
-#ld-chat-window{position:fixed;bottom:92px;right:24px;width:340px;max-height:520px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.16);display:flex;flex-direction:column;z-index:9998;overflow:hidden;opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;transition:all .25s ease}
-#ld-chat-window.ld-open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
-#ld-chat-header{background:#15311a;color:#fff;padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
-.ld-hlogo{font-size:16px;font-weight:700;letter-spacing:-.3px}.ld-hlogo span{color:#7bc47f}
-.ld-hstatus{font-size:11px;opacity:.7;margin-left:auto}
-#ld-chat-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0;line-height:1;opacity:.8}
-#ld-chat-msgs{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:9px}
-.ld-m{max-width:85%;padding:10px 13px;border-radius:12px;font-size:13.5px;line-height:1.5;animation:ldf .2s ease}
-.ld-m.b{background:#f0f4f1;color:#1a1a1a;border-bottom-left-radius:3px;align-self:flex-start}
-.ld-m.u{background:#15311a;color:#fff;border-bottom-right-radius:3px;align-self:flex-end}
-.ld-row{display:flex;flex-wrap:wrap;gap:7px;align-self:flex-start;animation:ldf .2s ease}
-.ld-b{background:#fff;border:1.5px solid #15311a;color:#15311a;border-radius:20px;padding:7px 14px;font-size:13px;cursor:pointer;transition:all .15s;font-family:inherit}
-.ld-b:hover,.ld-b.p{background:#15311a;color:#fff}
-.ld-b.p{font-weight:600}
-#ld-input-area{display:flex;padding:10px 12px;gap:8px;border-top:1px solid #eee;flex-shrink:0}
-#ld-inp{flex:1;border:1.5px solid #ddd;border-radius:20px;padding:8px 14px;font-size:13.5px;outline:none;font-family:inherit;transition:border-color .15s}
-#ld-inp:focus{border-color:#15311a}
-#ld-send{background:#15311a;border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
-#ld-send:hover{background:#0d2010}
-#ld-send svg{fill:#fff;width:16px;height:16px}
-@keyframes ldf{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:480px){#ld-chat-window{width:calc(100vw - 20px);right:10px;bottom:80px}}
-</style>
-
-<div id="ld-chat-bubble" onclick="ldToggle()">
-  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.68 1.19 5.09 3.09 6.78L4 22l4.46-1.49C9.55 20.83 10.74 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
-</div>
-<div id="ld-chat-window">
+<button id="ld-chat-bubble" type="button" aria-label="Chat öffnen" aria-expanded="false" aria-controls="ld-chat-window">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/></svg>
+  <span class="dot"></span>
+</button>
+<div id="ld-chat-window" inert role="dialog" aria-label="LuxDocs Chat">
   <div id="ld-chat-header">
-    <div class="ld-hlogo">Lux<span>Docs</span></div>
-    <div class="ld-hstatus">&#9679; Online</div>
-    <button id="ld-chat-close" onclick="ldToggle()">&#215;</button>
+    <div class="ld-hlogo">LuxDocs<small>Praxis-Assistent</small></div>
+    <div class="ld-hstatus">Online</div>
+    <button id="ld-chat-close" type="button" aria-label="Chat schließen">×</button>
   </div>
-  <div id="ld-chat-msgs"></div>
+  <div id="ld-chat-msgs" aria-live="polite"></div>
   <div id="ld-input-area">
-    <input id="ld-inp" type="text" placeholder="Nachricht eingeben ..." onkeydown="if(event.key==='Enter')ldSend()">
-    <button id="ld-send" onclick="ldSend()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    <input id="ld-inp" type="text" placeholder="Nachricht eingeben …" aria-label="Nachricht">
+    <button id="ld-send" type="button" aria-label="Senden"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
   </div>
 </div>
 
-<script>
-(function(){
-  var open = false;
-  var selectedKat = '';
-  var msgs = document.getElementById('ld-chat-msgs');
-  var inp = document.getElementById('ld-inp');
-  var ia = document.getElementById('ld-input-area');
+<div class="bar">
+  <button type="button" data-open="whatsapp">Kontakt aufnehmen</button>
+  <button type="button" data-open="booking">Termin buchen</button>
+</div>
 
-  var KI = {
-    'Allgemeine Beratung': 'Sch\u00f6n, dass Sie sich f\u00fcr ein allgemeines Beratungsgespr\u00e4ch interessieren. Wir nehmen uns daf\u00fcr bewusst ausf\u00fchrlich Zeit f\u00fcr Sie und Ihre Situation. Die individuelle Beratung und \u00e4rztliche Auseinandersetzung mit Ihrem Anliegen ist mit Kosten verbunden, die sich nach dem tats\u00e4chlichen Aufwand richten. Der erste Termin findet pers\u00f6nlich in der Praxis statt.',
-    'Medizinisches Cannabis': 'Danke f\u00fcr Ihr Vertrauen bei diesem Thema. Zur Cannabistherapie m\u00f6chten wir Ihnen mitgeben: Die Erstvorstellung findet grunds\u00e4tzlich pers\u00f6nlich vor Ort statt, nicht per Video. Ob eine Cannabistherapie f\u00fcr Sie infrage kommt, entscheidet sich erst nach einer ausf\u00fchrlichen, sorgf\u00e4ltigen \u00e4rztlichen Pr\u00fcfung \u2013 ein Rezept ist zu keinem Zeitpunkt garantiert. Bei einer laufenden Therapie ist mindestens einmal pro Quartal ein pers\u00f6nlicher Termin bei uns wichtig; Folgetermine dazwischen k\u00f6nnen gerne per Video stattfinden. Auch hier gilt: Die Beratung ist mit individuellen Kosten verbunden, die sich nach dem jeweiligen Aufwand richten.',
-    'Hormonelle Themen': 'Sch\u00f6n, dass Sie sich mit diesem Thema an uns wenden. Bei hormonellen Anliegen wie Testosteronmangel oder in der Pr\u00e4menopause besprechen wir zun\u00e4chst gemeinsam Ihre Symptome und veranlassen bei Bedarf eine gezielte Blutuntersuchung, die extern durchgef\u00fchrt wird. Die Besprechung der Ergebnisse kann gerne auch per Video erfolgen. Auch hier gilt: Die individuelle Beratung ist mit Kosten verbunden, die vom jeweiligen Aufwand abh\u00e4ngen; Laborkosten fallen zus\u00e4tzlich separat an.',
-    'Chronische Schmerzen': 'Wir freuen uns, dass Sie uns Ihr Anliegen anvertrauen m\u00f6chten. Bei chronischen Schmerzen betrachten wir Ihre Beschwerden gerne im Gesamtzusammenhang \u2013 Ihre Vorgeschichte, Ihre Lebensumst\u00e4nde und bisherige Behandlungen flie\u00dfen mit ein. Der erste Termin findet pers\u00f6nlich statt, Verlaufstermine sind danach auch per Video m\u00f6glich. Die individuelle Beratung ist mit Kosten verbunden, die sich nach dem Aufwand richten.',
-    'Blutuntersuchung': 'Gerne unterst\u00fctzen wir Sie dabei. Wir besprechen zun\u00e4chst Ihre Symptome und stellen bei Bedarf einen Laborzettel f\u00fcr eine externe Blutabnahme aus. Die Besprechung der Ergebnisse erfolgt in einem Folgetermin, auch per Video m\u00f6glich. Die Beratung ist mit individuellen Kosten verbunden; die Laborkosten selbst fallen separat an und werden meist direkt beim Labor beglichen.',
-    'Gutachten': 'Gerne erstellen wir f\u00fcr Sie eine schriftliche gutachtliche Stellungnahme. Der Umfang und damit auch die Kosten richten sich nach der individuellen Fragestellung \u2013 das besprechen wir vorab transparent mit Ihnen.'
-  };
-
-  window.ldToggle = function(){
-    open = !open;
-    document.getElementById('ld-chat-window').classList.toggle('ld-open', open);
-    if (open && msgs.children.length === 0) setTimeout(step1, 350);
-    if (open) inp.focus();
-  };
-
-  function step1(){
-    ia.style.display = 'none';
-    bot('Herzlich willkommen bei Praxis LuxDocs! Sch\u00f6n, dass Sie den Weg zu uns gefunden haben. Ich begleite Sie in ein paar kurzen, entspannten Schritten durch die wichtigsten Infos, bevor Sie einen Termin buchen oder uns kontaktieren \u2013 das dauert nur ein bis zwei Minuten.');
-    setTimeout(function(){
-      btns([{l:'Los geht\'s', p:true, fn:function(){rmBtns(); step2();}}]);
-    }, 600);
-  }
-
-  function step2(){
-    bot('Bevor wir loslegen, kurz eine wichtige Frage: Handelt es sich bei Ihrem Anliegen um einen akuten medizinischen Notfall?');
-    btns([
-      {l:'Nein', p:true, fn:function(){rmBtns(); user('Nein'); step3();}},
-      {l:'Ja \u2013 Notfall', fn:function(){
-        rmBtns(); user('Ja');
-        bot('Bitte wenden Sie sich in diesem Fall umgehend an den Notruf (112) oder die n\u00e4chste Notaufnahme. Unsere Praxis ist auf geplante Beratungstermine ausgerichtet und leider nicht f\u00fcr die Akutversorgung geeignet. Wir w\u00fcnschen Ihnen von Herzen alles Gute!');
-      }}
-    ]);
-  }
-
-  function step3(){
-    setTimeout(function(){
-      bot('Sch\u00f6n, dann erz\u00e4hle ich Ihnen kurz, wer wir sind und wie wir arbeiten:');
-      setTimeout(function(){
-        var d = document.createElement('div'); d.className = 'ld-m b';
-        [
-          'Wir sind eine Privatpraxis \u2013 die Behandlung wird nicht \u00fcber die gesetzliche Krankenkasse abgerechnet, sondern privat in Rechnung gestellt (auch bei privater Krankenversicherung reichen Sie die Rechnung im Nachhinein selbst ein).',
-          'Uns ist Zeit f\u00fcr Sie wichtig: Wir arbeiten gespr\u00e4chsorientiert, ohne Apparate, Spritzen oder klassische Diagnostik \u2013 im Mittelpunkt steht das ausf\u00fchrliche \u00e4rztliche Gespr\u00e4ch.',
-          'Wir verbinden fundierte Schulmedizin mit einer ganzheitlichen Perspektive \u2013 ehrlich und ohne Heilversprechen.'
-        ].forEach(function(it){
-          var p = document.createElement('p');
-          p.style.cssText = 'margin:3px 0;';
-          p.textContent = '\u2022 ' + it;
-          d.appendChild(p);
-        });
-        msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
-        setTimeout(function(){
-          btns([{l:'Alles klar, weiter', p:true, fn:function(){rmBtns(); step4();}}]);
-        }, 400);
-      }, 500);
-    }, 400);
-  }
-
-  function step4(){
-    bot('Eine kurze organisatorische Frage: Sind Sie mindestens 18 Jahre alt?');
-    btns([
-      {l:'Ja', p:true, fn:function(){rmBtns(); user('Ja'); step5();}},
-      {l:'Nein', fn:function(){
-        rmBtns(); user('Nein');
-        bot('Vielen Dank f\u00fcr Ihr Verst\u00e4ndnis: Unsere Praxis richtet sich ausschlie\u00dflich an vollj\u00e4hrige Patientinnen und Patienten. Wir empfehlen Ihnen, sich an eine kinder- und jugendmedizinische Praxis zu wenden. Alles Gute f\u00fcr Sie!');
-      }}
-    ]);
-  }
-
-  function step5(){
-    setTimeout(function(){
-      bot('Jetzt w\u00fcrde ich gerne von Ihnen wissen: Worum geht es bei Ihrem Anliegen? W\u00e4hlen Sie einfach die passende Kategorie \u2013 Sie bekommen direkt im Anschluss die wichtigsten Infos dazu.');
-      setTimeout(function(){
-        btns([
-          {l:'Allgemeine Beratung', fn:function(){rmBtns(); user('Allgemeine Beratung'); selectedKat='Allgemeine Beratung'; showInfo();}},
-          {l:'Medizinisches Cannabis', fn:function(){rmBtns(); user('Medizinisches Cannabis'); selectedKat='Medizinisches Cannabis'; showInfo();}},
-          {l:'Hormonelle Themen / Testosteron / Wechseljahre', fn:function(){rmBtns(); user('Hormonelle Themen'); selectedKat='Hormonelle Themen'; showInfo();}},
-          {l:'Chronische Schmerzen', fn:function(){rmBtns(); user('Chronische Schmerzen'); selectedKat='Chronische Schmerzen'; showInfo();}},
-          {l:'Blutuntersuchung', fn:function(){rmBtns(); user('Blutuntersuchung'); selectedKat='Blutuntersuchung'; showInfo();}},
-          {l:'Gutachten', fn:function(){rmBtns(); user('Gutachten'); selectedKat='Gutachten'; showInfo();}},
-          {l:'Sonstiges', fn:function(){rmBtns(); user('Sonstiges'); selectedKat='Sonstiges'; showSonstiges();}}
-        ]);
-      }, 400);
-    }, 400);
-  }
-
-  function showInfo(){
-    setTimeout(function(){
-      bot(KI[selectedKat]);
-      setTimeout(function(){
-        btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step6();}}]);
-      }, 500);
-    }, 400);
-  }
-
-  function showSonstiges(){
-    setTimeout(function(){
-      bot('Kein Problem \u2013 schildern Sie uns Ihr Anliegen gerne kurz in eigenen Worten. Wir melden uns bei Ihnen mit den passenden Informationen.');
-      ia.style.display = 'flex'; inp.focus();
-      window.ldSend = function(){
-        var v = inp.value.trim(); if (!v) return;
-        user(v); inp.value = ''; ia.style.display = 'none';
-        window.ldSend = noop;
-        setTimeout(function(){
-          bot('Vielen Dank! Wir werden uns bei Ihnen melden. Wie m\u00f6chten Sie fortfahren?');
-          setTimeout(step8, 500);
-        }, 400);
-      };
-    }, 400);
-  }
-
-  function step6(){
-    setTimeout(function(){
-      bot('Wie darf der Termin f\u00fcr Sie stattfinden \u2013 lieber pers\u00f6nlich vor Ort oder als Videosprechstunde?');
-      btns([
-        {l:'Vor Ort', p:true, fn:function(){rmBtns(); user('Vor Ort'); step7();}},
-        {l:'Videosprechstunde', fn:function(){
-          rmBtns(); user('Videosprechstunde');
-          if (selectedKat !== 'Gutachten') {
-            setTimeout(function(){
-              bot('F\u00fcr Ihr Anliegen m\u00f6chten wir Sie beim ersten Termin gerne pers\u00f6nlich in der Praxis kennenlernen \u2013 das dient Ihrer Sicherheit und einer sorgf\u00e4ltigen ersten Einsch\u00e4tzung. Videotermine sind wunderbar ab dem Folgetermin m\u00f6glich.');
-              setTimeout(function(){
-                btns([{l:'Alles klar, weiter', p:true, fn:function(){rmBtns(); step7();}}]);
-              }, 400);
-            }, 400);
-          } else { step7(); }
-        }}
-      ]);
-    }, 400);
-  }
-
-  function step7(){
-    setTimeout(function(){
-      bot('Noch ein wichtiger Hinweis, damit Sie gut vorbereitet zu uns kommen: Nach Ihrer Terminbuchung erhalten Sie elektronisch die wichtigsten Unterlagen \u2013 darunter Honorarvereinbarung, Datenschutzinformationen und Aufkl\u00e4rung zur Abrechnung nach GO\u00c4. Falls Sie diese lieber vor Ort erhalten m\u00f6chten, legen wir sie Ihnen selbstverst\u00e4ndlich direkt vor dem Termin vor. Die Bezahlung erfolgt nach dem Termin per Rechnung \u2013 bequem per \u00dcberweisung oder vor Ort per Karte.');
-      setTimeout(function(){
-        btns([{l:'Verstanden, weiter', p:true, fn:function(){rmBtns(); step8();}}]);
-      }, 400);
-    }, 400);
-  }
-
-  function step8(){
-    setTimeout(function(){
-      bot('Ganz herzlichen Dank, dass Sie sich die Zeit genommen haben und wir Sie ein St\u00fcck kennenlernen durften! Jetzt haben Sie zwei M\u00f6glichkeiten:');
-      setTimeout(function(){
-        var r = document.createElement('div');
-        r.className = 'ld-row';
-        r.style.cssText = 'flex-direction:column;gap:8px;align-self:stretch;';
-
-        var ja = document.createElement('a');
-        ja.className = 'ld-b p';
-        ja.style.cssText = 'text-decoration:none;text-align:center;display:block;';
-        ja.href = '#';
-        ja.textContent = 'Termin direkt \u00fcber Jameda buchen';
-        ja.onclick = function(e){
-          e.preventDefault();
-          window.ldToggle();
-          var m = document.getElementById('bookingModal');
-          if (m){ m.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
-        };
-        r.appendChild(ja);
-
-        var disc = document.createElement('p');
-        disc.style.cssText = 'font-size:11px;color:#888;margin:4px 0 0;line-height:1.4;padding:0 4px;';
-        disc.textContent = '\u26a0\ufe0f \u00dcber WhatsApp kl\u00e4ren wir gerne organisatorische Fragen (z. B. Terminverf\u00fcgbarkeit, allgemeine Abl\u00e4ufe). Medizinische Anliegen, Symptome oder Rezeptfragen besprechen wir ausschlie\u00dflich im pers\u00f6nlichen Gespr\u00e4ch oder in der Videosprechstunde.';
-        r.appendChild(disc);
-
-        var wab = document.createElement('a');
-        wab.className = 'ld-b';
-        wab.style.cssText = 'text-decoration:none;text-align:center;display:block;';
-        wab.href = '#';
-        wab.textContent = 'Organisatorische Frage per WhatsApp';
-        wab.onclick = function(e){
-          e.preventDefault();
-          window.ldToggle();
-          if (typeof openWAModal === 'function') openWAModal();
-        };
-        r.appendChild(wab);
-
-        var thanks = document.createElement('p');
-        thanks.style.cssText = 'font-size:12px;color:#555;margin:10px 0 2px;text-align:center;font-style:italic;';
-        thanks.textContent = 'Wir freuen uns darauf, Sie kennenzulernen!';
-        r.appendChild(thanks);
-
-        msgs.appendChild(r); msgs.scrollTop = msgs.scrollHeight;
-      }, 500);
-    }, 400);
-  }
-
-  function noop(){}
-  window.ldSend = noop;
-
-  function bot(t){ var d=document.createElement('div'); d.className='ld-m b'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
-  function user(t){ var d=document.createElement('div'); d.className='ld-m u'; d.textContent=t; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
-  function btns(arr){ var r=document.createElement('div'); r.className='ld-row'; arr.forEach(function(b){ var btn=document.createElement('button'); btn.className='ld-b'+(b.p?' p':''); btn.textContent=b.l; btn.onclick=b.fn; r.appendChild(btn); }); msgs.appendChild(r); msgs.scrollTop=msgs.scrollHeight; }
-  function rmBtns(){ msgs.querySelectorAll('.ld-row').forEach(function(r){r.remove();}); }
-})();
-
-
-</script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/chat.js"></script>
 </body>
 </html>
