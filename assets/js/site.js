@@ -1,4 +1,40 @@
 /* LuxDocs – Navigation, Menü, Auswahlfenster, Einblendungen, Inhaltsverzeichnis */
+
+/* ── Automatischer Dark/Light-Mode nach Uhrzeit ─────────────────────────
+   Dark:  22:00 – 06:59 Uhr  →  data-theme="dark"
+   Light: 07:00 – 21:59 Uhr  →  data-theme="light"
+   Prüft beim Laden und wechselt exakt zur nächsten Schwelle.          */
+(function () {
+  function applyTimeTheme() {
+    var h = new Date().getHours();
+    var isDark = h >= 22 || h < 7;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  }
+  applyTimeTheme();
+
+  /* Wechsel exakt zur nächsten Schwelle planen */
+  function scheduleNext() {
+    var now = new Date();
+    var h = now.getHours(), m = now.getMinutes(), s = now.getSeconds();
+    var isDark = h >= 22 || h < 7;
+    var msUntilSwitch;
+    if (isDark) {
+      /* Nächster Wechsel → 07:00 */
+      var next = new Date(now);
+      if (h >= 22) next.setDate(next.getDate() + 1);
+      next.setHours(7, 0, 0, 0);
+      msUntilSwitch = next - now;
+    } else {
+      /* Nächster Wechsel → 22:00 */
+      var next = new Date(now);
+      next.setHours(22, 0, 0, 0);
+      msUntilSwitch = next - now;
+    }
+    setTimeout(function () { applyTimeTheme(); scheduleNext(); }, msUntilSwitch);
+  }
+  scheduleNext();
+})();
+
 (function () {
   var body = document.body;
   var nav = document.getElementById('nav');
